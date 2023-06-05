@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMpvement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
+        
+    
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private float playerSpeed = 10.0f;

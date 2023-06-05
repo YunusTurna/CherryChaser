@@ -41,7 +41,7 @@ public class MapChanges : MonoBehaviour
         for (i = 0; i <= 1; i++)
         {
             
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(10);
             
             
             MapParts[i+2].GetComponent<MapMovement>().enabled = true;
