@@ -3,7 +3,7 @@ U21 Unity Takımı
 
 ## Takım Üyeleri
 - ***Ahmet Yunus Turna*** - Developer
-- ***Arif Furkan Karaca*** - Product Owner, Developer
+- ***Arif Furkan Karaca*** - Product Owner
 - ***Hilal Karakuş*** - Scrum Master
 - ***Kevser Bilgiç*** - Developer
 - ***Umut Yiğit*** - Developer
