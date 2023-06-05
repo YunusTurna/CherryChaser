@@ -5,7 +5,7 @@ U21 Unity Takımı
 - ***Ahmet Yunus Turna*** - Developer
 - ***Arif Furkan Karaca*** - Product Owner, Developer
 - ***Hilal Karakuş*** - Scrum Master
-- ***Kevser Bilgiç*** -
+- ***Kevser Bilgiç*** - Developer
 - ***Umut Yiğit*** - Developer
 
 ## Oyun İsmi
