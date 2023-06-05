@@ -11,6 +11,9 @@ x
 # Oyun İsmi
 Cherry Chasers
 
+# Product Backlog URL
+x
+
 # Oyun Açıklaması
 Cherry Chasers, oyuncular 5 kişiye kadar oyuncunun birbirleriyle mücadele ettikleri, harita üzerinde
 çeşitli görevleri tamamlayarak ve birbirlerini ekarte etmeye çalışarak puan topladıkları ve birinciliği
@@ -29,5 +32,5 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 - Puzzle sevenler
 - Mobil ve PC oyuncuları
 
-# Product Backlog URL
-x
+---
+# **SPRINT 1**
