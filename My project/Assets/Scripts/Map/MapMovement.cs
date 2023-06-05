@@ -11,12 +11,13 @@ public class MapMovement : MonoBehaviour
 
     void Start()
     {
-        rotationSpeed = 100f;
+        rotationSpeed = 10f;
 
     }
     
     void Update()
     {
+        
         transform.RotateAround(target.transform.position, Vector3.up, rotationSpeed * Time.deltaTime);
     }
     
