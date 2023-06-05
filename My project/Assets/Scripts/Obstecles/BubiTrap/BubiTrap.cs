@@ -16,7 +16,7 @@ public class BoobyTrap : MonoBehaviour
   if(other.gameObject.tag == "JumperTrap")
   {
     Debug.Log("Denemeee");
-    rb.AddForce(transform.up * jumpForce , ForceMode.Impulse);
+    rb.AddForce(Vector3.up * jumpForce , ForceMode.Impulse);
   }
  }
 
