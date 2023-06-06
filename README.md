@@ -1,3 +1,5 @@
+![Cherry Chasers Logo](https://github.com/YunusTurna/CherryChaser/assets/19787800/5f66e88f-2b11-44df-8cbf-e5e9207b0ff6)
+
 ## Takım İsmi
 U21 Unity Takımı
 
