@@ -5,9 +5,17 @@ using UnityEngine;
 public class MapChanges : MonoBehaviour
 {
    [SerializeField] private GameObject[] MapParts;
-  
-    public float riseSpeed;
+  //Haritanın yükselme hızıdır.
+      public float riseSpeed;
+
     private float timeCounter;
+    //Her harita parçasının kaç saniyede bir yok olacağını gösteririr.
+    public float destroyMapPartCounter = 5f;
+
+    //Yükselen harita parçasının kaç saniye boyunca yükseleceğini gösterir.
+    public float riseTime = 10f;
+
+    
     
     int i = 0;
 
@@ -38,10 +46,15 @@ public class MapChanges : MonoBehaviour
     {
         
 
-        for (i = 0; i <= 1; i++)
+        for (i = 0; i <= MapParts.Length - 3; i++)
         {
+            if(i == 1)
+            {
+                destroyMapPartCounter += 5;
+
+            }
             
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(destroyMapPartCounter);
             
             
             MapParts[i+2].GetComponent<MapMovement>().enabled = true;
@@ -52,15 +65,18 @@ public class MapChanges : MonoBehaviour
             StartCoroutine(Rise(MapParts[i+2]));
             
             MapParts[i+1].SetActive(false);
+           
+            
         }
         
     }
     IEnumerator Rise(GameObject MapParts)
     {
+        
         timeCounter = 0f;
         MapParts.GetComponent<MapMovement>().enabled = false;
 
-        while(timeCounter < 1f)
+        while(timeCounter < 5)
         {
           
             MapParts.transform.Translate(Vector3.up * riseSpeed * Time.deltaTime);
@@ -69,6 +85,8 @@ public class MapChanges : MonoBehaviour
             yield return null;
         }
         MapParts.GetComponent<MapMovement>().enabled = true;
+        Debug.Log(MapParts.transform.position.y);
+        
         
     }
     

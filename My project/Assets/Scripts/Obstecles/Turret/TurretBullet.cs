@@ -10,7 +10,7 @@ public class TurretBullet : MonoBehaviour
 
     void Start()
     {
-        firePower = 1000;
+        firePower = 5000;
         rb =GetComponent<Rigidbody>();
     }
 
