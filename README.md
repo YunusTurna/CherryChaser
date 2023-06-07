@@ -1,5 +1,3 @@
-<img src="https://i.imgur.com/7478qDt.png" width=600>
-
 ## Takım İsmi
 U21 Unity Takımı
 
