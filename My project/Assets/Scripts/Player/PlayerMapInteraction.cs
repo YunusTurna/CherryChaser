@@ -7,13 +7,14 @@ public class PlayerMapInteraction : MonoBehaviour
     public int bubiTrapPower;
     public int boosterPower;
     public string boosterMode = "forward";
-    [SerializeField] private GameObject booster;
+    [SerializeField] private GameObject[] boosters;
     
     Rigidbody rb;
     void Start()
     {
         InvokeRepeating("BoosterModeChangeMethod" , 0 , 3);
         rb = GetComponent<Rigidbody>();
+        boosters = GameObject.FindGameObjectsWithTag("Boosters");
     }
     void Update()
     {
@@ -53,13 +54,19 @@ public class PlayerMapInteraction : MonoBehaviour
         if(boosterMode == "forward")
         {
             boosterMode = "backward";
-            booster.GetComponent<Renderer>().material.color =  new Color(0,0,0);
+            for (int i = 0; i < boosters.Length; i++)
+            {
+                boosters[i].GetComponent<Renderer>().material.color =  new Color(0,0,0);
+            }
+           
         }
         else
         {
             boosterMode = "forward";
-            booster.GetComponent<Renderer>().material.color =  new Color(255,255,255);
-
+            for (int i = 0; i < boosters.Length; i++)
+            {
+                boosters[i].GetComponent<Renderer>().material.color =  new Color(255,255,255);
+            }
         }
 
     }

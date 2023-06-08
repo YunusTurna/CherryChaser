@@ -8,7 +8,8 @@ TagManager:
   - TurretBullet
   - Log
   - BubiTrap
-  - Booster
+  - JumperTrap
+  - Boosters
   layers:
   - Default
   - TransparentFX

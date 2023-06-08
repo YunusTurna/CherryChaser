@@ -5,9 +5,6 @@ using UnityEngine;
 public class Log : MonoBehaviour
 {
     public GameObject log;
-
-    
-    
     public GameObject finalPoint;
     public float speed;
     private bool moveTowards;
@@ -22,7 +19,7 @@ public class Log : MonoBehaviour
     {
         if(moveTowards == true)
         {
-            log.transform.position = Vector3.MoveTowards(log.transform.position, finalPoint.transform.position, speed * Time.deltaTime);
+            log.transform.position = Vector3.MoveTowards(log.transform.position,new Vector3(finalPoint.transform.position.x,finalPoint.transform.position.y +10,finalPoint.transform.position.z ) , speed * Time.deltaTime);
 
         }
         
