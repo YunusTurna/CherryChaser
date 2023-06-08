@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class BoobyTrap : MonoBehaviour
 {
-  private float jumpForce = 20f;
-  Rigidbody rb;
+  
+  public GameObject[] bubiSpawnPoints;
+  private int randomNumber;
+  
  void Start()
  {
-    rb = GetComponent<Rigidbody>();
+   InvokeRepeating("BubiChangePosition" , 0 , 3);
  }
  
- private void OnCollisionEnter(Collision other)
+ void BubiChangePosition()
  {
-  if(other.gameObject.tag == "JumperTrap")
-  {
-    Debug.Log("Denemeee");
-    rb.AddForce(Vector3.up * jumpForce , ForceMode.Impulse);
-  }
+  randomNumber = Random.Range(0,bubiSpawnPoints.Length);
+  gameObject.SetActive(true);
+  gameObject.transform.position = bubiSpawnPoints[randomNumber].transform.position;
+  
  }
+
+
+
+ 
+ 
 
   
  

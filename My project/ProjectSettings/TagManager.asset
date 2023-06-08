@@ -10,6 +10,7 @@ TagManager:
   - BubiTrap
   - JumperTrap
   - Boosters
+  - Second
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - UI
   - Orbit
   - Terrain
-  - 
-  - 
-  - 
+  - Akrep
+  - Yelkovan
+  - Saniye
   - 
   - 
   - 
