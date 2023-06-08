@@ -4,27 +4,64 @@ using UnityEngine;
 
 public class PlayerMapInteraction : MonoBehaviour
 {
+    public int bubiTrapPower;
+    public int boosterPower;
+    public string boosterMode = "forward";
+    [SerializeField] private GameObject booster;
+    
     Rigidbody rb;
-    public float turretBulletPushBack;
     void Start()
     {
+        InvokeRepeating("BoosterModeChangeMethod" , 0 , 3);
         rb = GetComponent<Rigidbody>();
-        
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
-    
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "TurretBullet")
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "BubiTrap")
         {
-            Debug.Log("TurretBullet");
-            rb.AddForce(Vector3.forward * turretBulletPushBack);
+            BubiTrapMethod();
+        }
+        if(other.gameObject.tag == "Booster")
+        {
+            BoosterMethod();
+        }
+    }
+    void BubiTrapMethod()
+    {
+        rb.AddForce(Vector3.up * bubiTrapPower , ForceMode.Impulse );
+    }
+    void BoosterMethod()
+    {
+        if(boosterMode == "forward")
+        {
+            rb.AddForce(new Vector3(1,0,0) * boosterPower , ForceMode.Impulse );
             
         }
+        else
+        {
+            rb.AddForce(new Vector3(-1,0,0) * boosterPower , ForceMode.Impulse);
+        }
+
+    }
+    void BoosterModeChangeMethod()
+    {
+        
+        if(boosterMode == "forward")
+        {
+            boosterMode = "backward";
+            booster.GetComponent<Renderer>().material.color =  new Color(0,0,0);
+        }
+        else
+        {
+            boosterMode = "forward";
+            booster.GetComponent<Renderer>().material.color =  new Color(255,255,255);
+
+        }
+
     }
     
 }

@@ -5,9 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Patrol
-  - JumperTrap
   - TurretBullet
   - Log
+  - BubiTrap
+  - Booster
   layers:
   - Default
   - TransparentFX
