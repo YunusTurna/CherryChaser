@@ -6,6 +6,7 @@ public class PlayerMapInteraction : MonoBehaviour
 {
     public int bubiTrapPower;
     public int boosterPower;
+    public int tiltedBoosterPower;
     public string boosterMode = "forward";
     [SerializeField] private GameObject[] boosters;
     
@@ -29,6 +30,13 @@ public class PlayerMapInteraction : MonoBehaviour
         if(other.gameObject.tag == "Booster")
         {
             BoosterMethod();
+        }
+        
+    }
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "TiltedBooster")
+        {
+            TiltedBooster();
         }
     }
     void BubiTrapMethod()
@@ -69,6 +77,11 @@ public class PlayerMapInteraction : MonoBehaviour
             }
         }
 
+    }
+    void TiltedBooster()
+    {
+        Debug.Log("Deneme");
+        rb.AddForce(( ((Vector3.forward * tiltedBoosterPower) + (Vector3.up * Mathf.Abs(tiltedBoosterPower))) * Time.deltaTime)   , ForceMode.Impulse);
     }
     
 }

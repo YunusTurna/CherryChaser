@@ -11,6 +11,8 @@ TagManager:
   - JumperTrap
   - Boosters
   - Second
+  - TiltedBooster
+  - VerticalBooster
   layers:
   - Default
   - TransparentFX
