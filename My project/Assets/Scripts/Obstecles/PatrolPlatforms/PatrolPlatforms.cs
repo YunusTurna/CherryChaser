@@ -7,8 +7,14 @@ public class PatrolPlatforms: MonoBehaviour
     
     public Transform[] patrolPoints;
     public GameObject wall;
+    public GameObject player;
     private int patrolPointIndex = 0;
     public float _speed = 2f;
+
+    void Start()
+    {
+       
+    }
 
     private void Update()
     {
@@ -22,5 +28,7 @@ public class PatrolPlatforms: MonoBehaviour
             wall.transform.position = Vector3.MoveTowards(transform.position, pp.position,_speed * Time.deltaTime);
         }
     }
+    
+    
    
 }

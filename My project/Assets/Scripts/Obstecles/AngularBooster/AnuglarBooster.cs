@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class AnuglarBooster : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
+    public float launchForce = 10f;  // Fırlatma kuvveti
+    private void Start() {
         
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Player")
+       {
+        other.gameObject.GetComponent<Rigidbody>().AddForce(((Vector3.forward * launchForce) + (Vector3.up * Mathf.Abs(launchForce))) * Time.deltaTime, ForceMode.Impulse );
+        CharacterMovement.grounded = true;
+        
+       }
+    }
+    
 }

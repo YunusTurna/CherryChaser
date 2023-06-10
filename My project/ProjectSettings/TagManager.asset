@@ -13,6 +13,8 @@ TagManager:
   - Second
   - TiltedBooster
   - VerticalBooster
+  - Ground
+  - LRDetection
   layers:
   - Default
   - TransparentFX
