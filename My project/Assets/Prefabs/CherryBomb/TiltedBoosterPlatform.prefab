@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2486146141439941167}
   - component: {fileID: 1459812496354888043}
   - component: {fileID: 1133943345981080819}
+  - component: {fileID: 3118071934326171381}
   m_Layer: 0
   m_Name: TiltedBoosterPlatform
   m_TagString: TiltedBooster
@@ -28,11 +29,11 @@ Transform:
   m_GameObject: {fileID: 1059325188423467556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 342.8535, y: 33, z: 576.2213}
-  m_LocalScale: {x: 4.2612057, y: 0.1, z: 3.861754}
+  m_LocalScale: {x: 9.600297, y: 0.1, z: 11.143533}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2486146141439941167
 MeshFilter:
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3118071934326171381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059325188423467556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1da052cd8b1c714ea89d59d4b58b8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: -1000
