@@ -15,6 +15,7 @@ TagManager:
   - VerticalBooster
   - Ground
   - LRDetection
+  - player
   layers:
   - Default
   - TransparentFX
