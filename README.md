@@ -48,16 +48,16 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
   ![Screenshot 2](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0009.jpg)
   ![Screenshot 3](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-19%2000.53.39.png)
   ![Screenshot 4](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/image.png)
-  ![Screenshot 4](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Kayd_%202023-06-19%2000.27.13%5B1%5D.gif)
 
 
 - **Sprint Review**:
-- Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir. Harita 
+- Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
+- Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
 
 - **Sprint Retrospective:**
   - Roller ile ilgili düzenleme yapılmış, product owner değişmiştir.
   - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
-  - Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapıldı.
-  - Karakterin hareket animasyonları ve mekanikleri eklendi.
-  - Map üzerindeki platformlara mekanikler eklendi.
+  - Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapılmıştır.
+  - Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
+  - Map üzerindeki platformlara mekanikler eklenmiştir.
