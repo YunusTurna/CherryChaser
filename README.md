@@ -40,3 +40,5 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken backlog puanı 32'dir. İlk Sprint içim bitirilmesi istenilen puan sayısı 10 olarak belirlenmiştir.
 - **Daily Scrum**: Zaman problemlerinden dolayı Whatsapp üzerinden görüşmeler sağlanmıştır. Tasarım grubu ve Ana Grup olarak iki adet grup oluşturuluştur.
 - **Tasarım ve Developing Mantığı**: Tasarım tarafı aynı zamanda developing kısmında da çalışacaktır. 1. ve 2. Sprint'te tasarım dilinin tam oturması için ayrı grup oluşturulması takımca doğru bulunmuştur.
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 1](
