@@ -5,6 +5,7 @@ using UnityEngine;
 public class PumpkinAnimation : MonoBehaviour
 {
     Rigidbody rb;
+    private bool grounded;
     Animator anim;
     private void Start()
     {
@@ -17,7 +18,7 @@ public class PumpkinAnimation : MonoBehaviour
         Walk();
         Jump();
         Run();
-        Debug.Log(CharacterMovement.grounded);
+       
 
 
     }
@@ -37,7 +38,7 @@ public class PumpkinAnimation : MonoBehaviour
     }
     void Jump()
     {
-        if (rb.velocity.y != 0 & CharacterMovement.grounded != true)
+        if (grounded == false)
         {
             anim.SetBool("Jump", true);
         }
@@ -56,6 +57,18 @@ public class PumpkinAnimation : MonoBehaviour
         else
         {
             anim.SetBool("Run", false);
+        }
+    }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+    }
+ private void OnCollisionExit(Collision other) {
+        if(other.gameObject.tag == "Ground")
+        {
+            grounded = false;
         }
     }
 
