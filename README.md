@@ -44,7 +44,7 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 ![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0007.jpg)
 
 - **Ürün Durumu**: Ekran Görüntüleri:
-  ![Screenshot 1]()
-  ![Screenshot 2]()
+  ![Screenshot 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0010.jpg)
+  ![Screenshot 2](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0009.jpg)
   ![Screenshot 3]()
 
