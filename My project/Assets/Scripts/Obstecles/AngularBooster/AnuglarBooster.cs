@@ -15,7 +15,7 @@ public class AnuglarBooster : MonoBehaviour
         if(other.gameObject.tag == "Player")
        {
         other.gameObject.GetComponent<Rigidbody>().AddForce(((Vector3.forward * launchForce) + (Vector3.up * Mathf.Abs(launchForce))) * Time.deltaTime, ForceMode.Impulse );
-        CharacterMovement.grounded = true;
+        
         
        }
     }

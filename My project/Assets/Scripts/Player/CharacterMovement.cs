@@ -46,6 +46,14 @@ public class CharacterMovement : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            movementSpeed = movementSpeed * 3;
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            movementSpeed = movementSpeed/3;
+        }
 
         // Fare ile kamera rotasyonu
         float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -55,7 +63,7 @@ public class CharacterMovement : MonoBehaviour
         verticalRotation = Mathf.Clamp(verticalRotation, -60f, 60f);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
     }
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionStay(Collision other) {
         if(other.gameObject.tag == "Ground")
         {
             grounded = true;
