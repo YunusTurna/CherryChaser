@@ -14,7 +14,7 @@ U21 Unity Takımı
 Cherry Chasers
 
 ## Product Backlog URL
-[U21 Unity Trello Backlog Board](https://trello.com/w/u21takimiunitybacklogboard)
+[U21 Unity Trello Backlog Board](https://trello.com/b/XGJi2Ldu/team-board)
 
 ## Oyun Açıklaması
 Cherry Chasers, oyuncular 5 kişiye kadar oyuncunun birbirleriyle mücadele ettikleri, harita üzerinde
@@ -37,10 +37,11 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 ---
 # **SPRINT 1**
 - Sprint içi puan değerlendirmesi 10 olarak belirlenmiştir.
-- **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken backlog puanı 32'dir. İlk Sprint içim bitirilmesi istenilen puan sayısı 10 olarak belirlenmiştir.
-- **Daily Scrum**: Zaman problemlerinden dolayı Whatsapp üzerinden görüşmeler sağlanmıştır. Tasarım grubu ve Ana Grup olarak iki adet grup oluşturuluştur.
+- **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken backlog puanı 36'dır. İlk Sprint içim bitirilmesi istenilen puan sayısı 10 olarak belirlenmiştir.
+- **Daily Scrum**: Whatsapp üzerinden görüşmeler sağlanmıştır. Tasarım grubu ve Ana Grup olarak iki adet grup oluşturuluştur.
 ![Toplantı ve Whatsapp ScreenShotları](https://imgur.com/a/PumMMSx)
 - **Tasarım ve Developing Mantığı**: Tasarım tarafı aynı zamanda developing kısmında da çalışacaktır. 1. ve 2. Sprint'te tasarım dilinin tam oturması için ayrı grup oluşturulması takımca doğru bulunmuştur.
+- **Tasarım Grubu Üyeleri**: Arif, Kevser, Hilal.
 - **Sprint board update**: Sprint Board Screenshot: 
 ![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0007.jpg)
 
@@ -49,7 +50,7 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
   ![Screenshot 2](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0009.jpg)
   ![Screenshot 3](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-19%2000.53.39.png)
   ![Screenshot 4](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/image.png)
-  ![GIF 5](https://i.imgur.com/wMOsXfM.gif)
+  ![GIF 1](https://i.imgur.com/7a7pykI.gif)
 
 
 - **Sprint Review**:
@@ -63,3 +64,6 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
   - Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapılmıştır.
   - Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
   - Map üzerindeki platformlara mekanikler eklenmiştir.
+
+
+---
