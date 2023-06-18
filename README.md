@@ -41,4 +41,4 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 - **Daily Scrum**: Zaman problemlerinden dolayı Whatsapp üzerinden görüşmeler sağlanmıştır. Tasarım grubu ve Ana Grup olarak iki adet grup oluşturuluştur.
 - **Tasarım ve Developing Mantığı**: Tasarım tarafı aynı zamanda developing kısmında da çalışacaktır. 1. ve 2. Sprint'te tasarım dilinin tam oturması için ayrı grup oluşturulması takımca doğru bulunmuştur.
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://github.com/YunusTurna/CherryChaser/edit/main/README.md#:~:text=IMG%2D20230618%2D-,WA0007,-.jpg)
+![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0007.jpg)
