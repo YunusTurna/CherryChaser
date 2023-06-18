@@ -52,8 +52,8 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 
 
 - **Sprint Review**:
-- Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
-- Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
+  - Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
+  - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
 
 - **Sprint Retrospective:**
