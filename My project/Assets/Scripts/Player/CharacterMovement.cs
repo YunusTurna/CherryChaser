@@ -18,7 +18,8 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         // Fare imleci gizleniyor ve sınırları belirleniyor
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
