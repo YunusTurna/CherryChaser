@@ -16,6 +16,7 @@ TagManager:
   - Ground
   - LRDetection
   - player
+  - Cherry
   layers:
   - Default
   - TransparentFX
