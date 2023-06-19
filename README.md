@@ -40,7 +40,7 @@ amaçladıkları bir 3D, üçüncü şahıs, arena brawl oyunudur.
 - **Puan tamamlama mantığı**: Proje boyunca tamamlanması gereken backlog puanı 36'dır. İlk Sprint içim bitirilmesi istenilen puan sayısı 10 olarak belirlenmiştir.
 - **Daily Scrum**: Whatsapp üzerinden görüşmeler sağlanmıştır. Tasarım grubu ve Ana Grup olarak iki adet grup oluşturuluştur.
   
-Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="en" data-id="a/tT5yDdA"  ><a href="//imgur.com/a/tT5yDdA">Whatsapp</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="en" data-id="a/tT5yDdA"  ><a href="//imgur.com/a/tT5yDdA">Whatsapp</a></blockquote>
 
 - **Tasarım ve Developing Mantığı**: Tasarım tarafı aynı zamanda developing kısmında da çalışacaktır. 1. ve 2. Sprint'te tasarım dilinin tam oturması için ayrı grup oluşturulması takımca doğru bulunmuştur.
 - **Tasarım Grubu Üyeleri**: Arif, Kevser, Hilal.
