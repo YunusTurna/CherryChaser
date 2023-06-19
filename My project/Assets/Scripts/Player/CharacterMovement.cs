@@ -7,8 +7,10 @@ public class CharacterMovement : MonoBehaviour
 {
     public float movementSpeed = 5f;     // Hareket hızı
     public float jumpForce = 5f;         // Zıplama kuvveti
+    public float throwForce = 10f;
     public float mouseSensitivity = 2f;  // Fare hassasiyeti
     public static bool grounded = false;
+    public bool throwBool = false;
 
     private float verticalRotation = 0f;
     private Rigidbody rb;
@@ -24,8 +26,35 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.E) &throwBool == true)
+        {
+            Throw();
+
+        }
         
-        
+        MovementMethod();
+    }
+    private void OnCollisionStay(Collision other) {
+        if(other.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+        if(other.gameObject.tag == "Cherry")
+        {
+            throwBool = true;
+        }
+    }
+    private void Throw()
+    {
+        GameObject.FindGameObjectWithTag("Cherry").GetComponent<Rigidbody>().AddForce(Vector3.forward * throwForce * Time.deltaTime, ForceMode.Impulse);
+        throwBool = false;
+    }
+    private void MovementMethod()
+    {
         float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed;
 
         
@@ -62,16 +91,7 @@ public class CharacterMovement : MonoBehaviour
         verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         verticalRotation = Mathf.Clamp(verticalRotation, -60f, 60f);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-    }
-    private void OnCollisionStay(Collision other) {
-        if(other.gameObject.tag == "Ground")
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
-        }
+
     }
 }
 
