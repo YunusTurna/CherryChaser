@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CamScript : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    void Start()
-    {
-        
-    }
+    public float rotationSpeed = 5f;
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position;
-        
+        // Fare hareketini al
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        // Kamerayı yatay eksende döndür
+        transform.Rotate(0f, mouseX * rotationSpeed, 0f);
+
+        // Kamerayı dikey eksende döndür ve sınırla
+        float rotationX = transform.localEulerAngles.x - mouseY * rotationSpeed;
+        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        transform.localEulerAngles = new Vector3(rotationX, transform.localEulerAngles.y, 0f);
     }
 }

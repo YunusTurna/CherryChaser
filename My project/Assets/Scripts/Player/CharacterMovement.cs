@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float movementSpeed = 5f;
+
+    public float movementSpeed = 5f;
 
     [SerializeField]
     private float turnSpeed = 10f;
+    public float jumpPower = 10f;
+    public bool grounded = false;
 
     private Transform cameraTransform;
     private Rigidbody rb;
     private bool cursorLocked = true;
+
+    
 
     private void Start()
     {
@@ -20,6 +24,21 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("123");
+            movementSpeed = movementSpeed * 2;
+        }
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("345");
+            movementSpeed  = movementSpeed / 2;
+        }
+    }
+    
 
     private void FixedUpdate()
     {
@@ -47,6 +66,12 @@ public class PlayerMovement : MonoBehaviour
             cursorLocked = !cursorLocked;
             LockCursor();
         }
+        // Zıplama
+        if(Input.GetKey(KeyCode.Space) & grounded == true)
+        {
+            rb.AddForce(Vector3.up * jumpPower , ForceMode.Impulse);
+            grounded = false;
+        }
     }
 
     private void LockCursor()
@@ -62,4 +87,12 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = true;
         }
     }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
+    }
+    
 }
+   
