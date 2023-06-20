@@ -3,76 +3,115 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed = 5f;     // Hareket hızı
-    public float jumpForce = 5f;         // Zıplama kuvveti
-    public float mouseSensitivity = 2f;  // Fare hassasiyeti
-    public static bool grounded = false;
+    [SerializeField]
+    private float maximumSpeed;
 
-    private float verticalRotation = 0f;
-    private Rigidbody rb;
+    [SerializeField]
+    private float rotationSpeed;
 
+    [SerializeField]
+    private float jumpSpeed;
+
+    [SerializeField]
+    private float jumpButtonGracePeriod;
+
+    [SerializeField]
+    private Transform cameraTransform;
+
+    
+    private CharacterController characterController;
+    private float ySpeed;
+    private float originalStepOffset;
+    private float? lastGroundedTime;
+    private float? jumpButtonPressedTime;
+
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-
-        // Fare imleci gizleniyor ve sınırları belirleniyor
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
+        characterController = GetComponent<CharacterController>();
+        originalStepOffset = characterController.stepOffset;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        
-        
-        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
+        float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
         
-        float verticalMovement = Input.GetAxis("Vertical") * movementSpeed;
-
-        
-        Vector3 movement = new Vector3(horizontalMovement, 0f, verticalMovement);
-        movement = transform.rotation * movement;
-
-       
-        if((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) & grounded == true)
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
+            inputMagnitude *= 3;
         }
 
-        // Zıplama
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.01f)
+        
+
+        float speed = inputMagnitude * maximumSpeed;
+        movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
+        movementDirection.Normalize();
+
+        ySpeed += Physics.gravity.y * Time.deltaTime;
+
+        if (characterController.isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            movementSpeed = movementSpeed * 3;
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            movementSpeed = movementSpeed/3;
+            lastGroundedTime = Time.time;
         }
 
-        // Fare ile kamera rotasyonu
-        float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
-        transform.Rotate(0f, horizontalRotation, 0f);
-
-        verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-        verticalRotation = Mathf.Clamp(verticalRotation, -60f, 60f);
-        Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-    }
-    private void OnCollisionStay(Collision other) {
-        if(other.gameObject.tag == "Ground")
+        if (Input.GetButtonDown("Jump"))
         {
-            grounded = true;
+            jumpButtonPressedTime = Time.time;
+        }
+
+        if (Time.time - lastGroundedTime <= jumpButtonGracePeriod)
+        {
+            characterController.stepOffset = originalStepOffset;
+            ySpeed = -0.5f;
+
+            if (Time.time - jumpButtonPressedTime <= jumpButtonGracePeriod)
+            {
+                ySpeed = jumpSpeed;
+                jumpButtonPressedTime = null;
+                lastGroundedTime = null;
+            }
         }
         else
         {
-            grounded = false;
+            characterController.stepOffset = 0;
+        }
+
+        Vector3 velocity = movementDirection * speed;
+        velocity.y = ySpeed;
+
+        characterController.Move(velocity * Time.deltaTime);
+
+        if (movementDirection != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        }        
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Ground")
+        {
+            Debug.Log("Deneme");
         }
     }
 }
-
-

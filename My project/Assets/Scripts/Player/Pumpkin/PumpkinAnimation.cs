@@ -62,6 +62,7 @@ public class PumpkinAnimation : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Ground")
         {
+            Debug.Log("Deneme");
             grounded = true;
         }
     }

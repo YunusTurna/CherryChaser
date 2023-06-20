@@ -32,11 +32,11 @@ public class JumpBoost : MonoBehaviour
         runMethod = false;
         this.gameObject.GetComponent<SphereCollider>().enabled = false;
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-        player.GetComponent<CharacterMovement>().jumpForce = player.GetComponent<CharacterMovement>().jumpForce* multiplayer;
+        //player.GetComponent<CharacterMovement>().jumpForce = player.GetComponent<CharacterMovement>().jumpForce* multiplayer;
         yield return new WaitForSeconds(boostTime);
         this.gameObject.GetComponent<SphereCollider>().enabled = true;
         this.gameObject.GetComponent<MeshRenderer>().enabled = true;
-        player.GetComponent<CharacterMovement>().jumpForce = player.GetComponent<CharacterMovement>().jumpForce/ multiplayer;
+        //player.GetComponent<CharacterMovement>().jumpForce = player.GetComponent<CharacterMovement>().jumpForce/ multiplayer;
         
 
 

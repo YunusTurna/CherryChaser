@@ -13,7 +13,7 @@ public class VerticalBooster : MonoBehaviour
        if(other.gameObject.tag == "Player")
        {
         other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * power *Time.deltaTime, ForceMode.Impulse );
-         CharacterMovement.grounded = true;
+         //CharacterMovement.grounded = true;
        }
         
     }
