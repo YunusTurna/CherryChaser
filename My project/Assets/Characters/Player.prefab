@@ -2023,7 +2023,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136579931667523081}
-  m_LocalRotation: {x: 0.340871, y: -0.042612307, z: 0.015468634, w: 0.93901646}
+  m_LocalRotation: {x: 0.340871, y: -0.042612273, z: 0.015468623, w: 0.93901646}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8795,7 +8795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8337640829460003242}
-  m_LocalRotation: {x: 0.3237798, y: -0.042885926, z: 0.01469304, w: 0.9450458}
+  m_LocalRotation: {x: 0.3237798, y: -0.042885877, z: 0.014693024, w: 0.9450458}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9357,7 +9357,6 @@ GameObject:
   - component: {fileID: 1516738736186967878}
   - component: {fileID: 1460349340273570992}
   - component: {fileID: 933023631177579302}
-  - component: {fileID: 2292660071068676404}
   - component: {fileID: 4608111232701529904}
   - component: {fileID: 8584419395716029743}
   m_Layer: 0
@@ -9399,11 +9398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1706a8db58d2f8489f69f4fee44d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumSpeed: 10
-  rotationSpeed: 400
-  jumpSpeed: 10
-  jumpButtonGracePeriod: 3
-  cameraTransform: {fileID: 0}
+  movementSpeed: 5
+  turnSpeed: 10
 --- !u!114 &1460349340273570992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9437,32 +9433,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!143 &2292660071068676404
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9032703679673349365}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 1
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 5
-  m_Radius: 1.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.6, z: 0}
 --- !u!54 &4608111232701529904
 Rigidbody:
   m_ObjectHideFlags: 0

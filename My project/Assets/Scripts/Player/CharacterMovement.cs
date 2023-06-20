@@ -1,117 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float maximumSpeed;
+    private float movementSpeed = 5f;
 
     [SerializeField]
-    private float rotationSpeed;
+    private float turnSpeed = 10f;
 
-    [SerializeField]
-    private float jumpSpeed;
-
-    [SerializeField]
-    private float jumpButtonGracePeriod;
-
-    [SerializeField]
     private Transform cameraTransform;
+    private Rigidbody rb;
+    private bool cursorLocked = true;
 
-    
-    private CharacterController characterController;
-    private float ySpeed;
-    private float originalStepOffset;
-    private float? lastGroundedTime;
-    private float? jumpButtonPressedTime;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-        characterController = GetComponent<CharacterController>();
-        originalStepOffset = characterController.stepOffset;
+        cameraTransform = Camera.main.transform;
+        rb = GetComponent<Rigidbody>();
+        LockCursor();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        float inputMagnitude = Mathf.Clamp01(movementDirection.magnitude);
-        
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-        {
-            inputMagnitude *= 3;
-        }
+        // Kamera yönünü hesapla
+        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 movementDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
 
-        
+        // Hareketi uygula
+        Vector3 movement = movementDirection * movementSpeed;
+        rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
 
-        float speed = inputMagnitude * maximumSpeed;
-        movementDirection = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movementDirection;
-        movementDirection.Normalize();
-
-        ySpeed += Physics.gravity.y * Time.deltaTime;
-
-        if (characterController.isGrounded)
-        {
-            lastGroundedTime = Time.time;
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpButtonPressedTime = Time.time;
-        }
-
-        if (Time.time - lastGroundedTime <= jumpButtonGracePeriod)
-        {
-            characterController.stepOffset = originalStepOffset;
-            ySpeed = -0.5f;
-
-            if (Time.time - jumpButtonPressedTime <= jumpButtonGracePeriod)
-            {
-                ySpeed = jumpSpeed;
-                jumpButtonPressedTime = null;
-                lastGroundedTime = null;
-            }
-        }
-        else
-        {
-            characterController.stepOffset = 0;
-        }
-
-        Vector3 velocity = movementDirection * speed;
-        velocity.y = ySpeed;
-
-        characterController.Move(velocity * Time.deltaTime);
-
+        // Karakterin yönünü kamera yönüne ayarla
         if (movementDirection != Vector3.zero)
         {
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, turnSpeed * Time.deltaTime);
+        }
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }        
+        // Imleci kilitleme/kilidini açma
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            cursorLocked = !cursorLocked;
+            LockCursor();
+        }
     }
 
-    private void OnApplicationFocus(bool focus)
+    private void LockCursor()
     {
-        if (focus)
+        if (cursorLocked)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.None;
-        }
-    }
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Ground")
-        {
-            Debug.Log("Deneme");
+            Cursor.visible = true;
         }
     }
 }
