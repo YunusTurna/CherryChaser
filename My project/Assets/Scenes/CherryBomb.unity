@@ -3902,10 +3902,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1516738736186967878, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-      propertyPath: cameraSensitivity
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 3301770101985455666, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.042612307
@@ -3916,11 +3912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6271903220148409299, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.042885877
+      value: -0.042885926
       objectReference: {fileID: 0}
     - target: {fileID: 6271903220148409299, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.014693024
+      value: 0.01469304
       objectReference: {fileID: 0}
     - target: {fileID: 9032703679673349365, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
       propertyPath: m_Name
