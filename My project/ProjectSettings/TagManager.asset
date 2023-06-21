@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - LRDetection
   - AngularBooster
+  - CherryPoint
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Player
   - Obstacles
-  - 
+  - Cherry
   - 
   - 
   - 
