@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpBoost : MonoBehaviour
+public class InvinsibilitySphere : MonoBehaviour
 {
 
     [SerializeField] GameObject player;
@@ -12,7 +12,7 @@ public class JumpBoost : MonoBehaviour
 
 
 
-
+    
 
     void OnCollisionEnter(Collision other)
     {
@@ -32,11 +32,11 @@ public class JumpBoost : MonoBehaviour
         runMethod = false;
         this.gameObject.GetComponent<SphereCollider>().enabled = false;
         this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-        player.GetComponent<PlayerMovement>().jumpPower  = player.GetComponent<PlayerMovement>().jumpPower * multiplayer;
+        player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         yield return new WaitForSeconds(boostTime);
         this.gameObject.GetComponent<SphereCollider>().enabled = true;
         this.gameObject.GetComponent<MeshRenderer>().enabled = true;
-        player.GetComponent<PlayerMovement>().jumpPower  = player.GetComponent<PlayerMovement>().jumpPower / multiplayer;
+        player.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
         
 
 

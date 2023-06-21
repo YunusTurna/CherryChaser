@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3825137421435876053}
   - component: {fileID: 1814378011887468053}
   - component: {fileID: 8560749575244391348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,9 +119,9 @@ GameObject:
   - component: {fileID: 7031205530271354571}
   - component: {fileID: 1703223202158516281}
   - component: {fileID: 6013648140673700392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube.003
-  m_TagString: TiltedBooster
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1da052cd8b1c714ea89d59d4b58b8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: -1000
+  launchForce: 1000
+  addForce: 0
 --- !u!1 &6297672725019210784
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,9 +236,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8121568601203210294}
-  m_Layer: 0
-  m_Name: "egimli_z\u0131plama"
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: AngularBooster
+  m_TagString: AngularBooster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,13 +250,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6297672725019210784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 336.28818, y: 32.35, z: 637.81384}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -216.89, y: 236.46198, z: -12.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3022155524991662954}
   - {fileID: 5725220098598329385}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

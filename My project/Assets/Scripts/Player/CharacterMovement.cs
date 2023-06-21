@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Transform cameraTransform;
     private Rigidbody rb;
     private bool cursorLocked = true;
+    public Vector3 movement;
 
     
 
@@ -25,19 +26,7 @@ public class PlayerMovement : MonoBehaviour
         LockCursor();
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Debug.Log("123");
-            movementSpeed = movementSpeed * 2;
-        }
-        if(Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Debug.Log("345");
-            movementSpeed  = movementSpeed / 2;
-        }
-    }
+   
     
 
     private void FixedUpdate()
@@ -49,9 +38,17 @@ public class PlayerMovement : MonoBehaviour
         Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
         Vector3 movementDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
 
-        // Hareketi uygula
-        Vector3 movement = movementDirection * movementSpeed;
-        rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
+        if(AngularBooster.addForce == false)
+        {
+            Vector3 movement = movementDirection * movementSpeed;
+        
+        
+            rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
+
+        }
+        
+        
+        
 
         // Karakterin yönünü kamera yönüne ayarla
         if (movementDirection != Vector3.zero)
@@ -72,6 +69,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpPower , ForceMode.Impulse);
             grounded = false;
         }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            
+        }
     }
 
     private void LockCursor()
@@ -91,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.tag == "Ground")
         {
             grounded = true;
+            AngularBooster.addForce= false;
         }
     }
     

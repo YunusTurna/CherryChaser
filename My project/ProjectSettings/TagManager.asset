@@ -5,17 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Patrol
-  - TurretBullet
-  - Log
-  - BubiTrap
-  - JumperTrap
-  - Boosters
-  - Second
   - TiltedBooster
   - VerticalBooster
   - Ground
   - LRDetection
-  - player
+  - AngularBooster
   layers:
   - Default
   - TransparentFX

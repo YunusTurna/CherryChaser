@@ -2023,7 +2023,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136579931667523081}
-  m_LocalRotation: {x: 0.340871, y: -0.042612273, z: 0.015468623, w: 0.93901646}
+  m_LocalRotation: {x: 0.16848299, y: 0.8174056, z: -0.29672575, w: 0.46412873}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4774,7 +4774,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4795507887537173705}
-  m_LocalRotation: {x: 0.35789487, y: -0.042323872, z: 0.016241165, w: 0.9326608}
+  m_LocalRotation: {x: 0.17689738, y: 0.8118731, z: -0.3115449, w: 0.46098727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6898,7 +6898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6940425264787856203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9057312, y: 10.849998, z: -9.958923}
+  m_LocalPosition: {x: -8.587494, y: 10.849998, z: 5.1239624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6950,7 +6950,7 @@ MonoBehaviour:
   m_YAxis:
     Value: 1
     m_SpeedMode: 0
-    m_MaxSpeed: 5
+    m_MaxSpeed: 20
     m_AccelTime: 0.2
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -6974,7 +6974,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -8795,7 +8795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8337640829460003242}
-  m_LocalRotation: {x: 0.3237798, y: -0.042885877, z: 0.014693024, w: 0.9450458}
+  m_LocalRotation: {x: 0.1600353, y: 0.8226541, z: -0.281848, w: 0.46710888}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9398,8 +9398,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1706a8db58d2f8489f69f4fee44d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 20
   turnSpeed: 10
+  jumpPower: 10
+  grounded: 0
+  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &1460349340273570992
 MonoBehaviour:
   m_ObjectHideFlags: 0
