@@ -10,7 +10,7 @@ TagManager:
   - Ground
   - LRDetection
   - AngularBooster
-  - CherryPoint
+  - CherryReturnPoint
   layers:
   - Default
   - TransparentFX
