@@ -38,6 +38,10 @@ public class CherryScript : MonoBehaviour
             this.gameObject.GetComponent<SphereCollider>().isTrigger = false;
 
         }
+        if(Input.GetKeyUp(KeyCode.E))
+        {
+            grounded = true;
+        }
         if(spin == true)
         {
             transform.Rotate(rotation * rotateSpeed * Time.deltaTime , Space.Self);

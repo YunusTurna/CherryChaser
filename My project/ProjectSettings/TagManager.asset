@@ -13,6 +13,8 @@ TagManager:
   - CherryReturnPoint
   - Explosion
   - DeathCams
+  - Cherry
+  - BeChild
   layers:
   - Default
   - TransparentFX
