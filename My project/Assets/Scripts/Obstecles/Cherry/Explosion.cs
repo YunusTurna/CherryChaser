@@ -29,6 +29,7 @@ public class Explosion : MonoBehaviour
             explosion = false;
             this.gameObject.GetComponent<SphereCollider>().enabled = true;
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            Destroy(Cherry);
 
         }
 

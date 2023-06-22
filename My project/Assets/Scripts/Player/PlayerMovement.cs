@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 5f;
 
     [SerializeField] private float turnSpeed = 10f;
+    [SerializeField] private GameObject deathCam;
     public float jumpPower = 10f;
     public bool grounded = false;
     
@@ -109,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<PumpkinAnimation>().enabled = false;
             gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
+            Destroy(deathCam);
         }
         
     }

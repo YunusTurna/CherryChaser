@@ -9,10 +9,7 @@ public class PlayerDeathState : MonoBehaviour
     int i = 0;
     
 
-    private void Awake()
-    {
-      deathCams = GameObject.FindGameObjectsWithTag("DeathCams");
-    }
+    
     void Update()
     {
         DeathState();
@@ -21,6 +18,7 @@ public class PlayerDeathState : MonoBehaviour
     }
     void DeathState()
     {
+        deathCams = GameObject.FindGameObjectsWithTag("DeathCams");
         transform.position = Vector3.MoveTowards(transform.position , deathCams[i].transform.position ,  transationSpeed* Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.E) & i < deathCams.Length)
         {
