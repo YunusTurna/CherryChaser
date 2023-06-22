@@ -11,6 +11,8 @@ TagManager:
   - LRDetection
   - AngularBooster
   - CherryReturnPoint
+  - Explosion
+  - DeathCams
   layers:
   - Default
   - TransparentFX

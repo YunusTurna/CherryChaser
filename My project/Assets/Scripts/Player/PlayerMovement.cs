@@ -7,17 +7,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float movementSpeed = 5f;
 
-    [SerializeField]
-    private float turnSpeed = 10f;
+    [SerializeField] private float turnSpeed = 10f;
     public float jumpPower = 10f;
     public bool grounded = false;
+    
 
     private Transform cameraTransform;
+   
     private Rigidbody rb;
     private bool cursorLocked = true;
     public Vector3 movement;
 
-    
+
 
     private void Start()
     {
@@ -25,11 +26,17 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }
-
-   
-    
-
     private void FixedUpdate()
+    {
+       
+        
+            Movement();
+
+        
+        
+    }
+    
+    private void Movement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -38,18 +45,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
         Vector3 movementDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
 
-        if(AngularBooster.addForce == false)
+        if (AngularBooster.addForce == false)
         {
             Vector3 movement = movementDirection * movementSpeed;
-        
-        
+
+
             rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
 
         }
-        
-        
-        
-
         // Karakterin yönünü kamera yönüne ayarla
         if (movementDirection != Vector3.zero)
         {
@@ -64,17 +67,16 @@ public class PlayerMovement : MonoBehaviour
             LockCursor();
         }
         // Zıplama
-        if(Input.GetKey(KeyCode.Space) & grounded == true)
+        if (Input.GetKey(KeyCode.Space) & grounded == true)
         {
-            rb.AddForce(Vector3.up * jumpPower , ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             grounded = false;
         }
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            
+
         }
     }
-
     private void LockCursor()
     {
         if (cursorLocked)
@@ -88,13 +90,28 @@ public class PlayerMovement : MonoBehaviour
             Cursor.visible = true;
         }
     }
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Ground")
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Ground")
         {
             grounded = true;
-            AngularBooster.addForce= false;
+            AngularBooster.addForce = false;
         }
     }
-    
-}
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Explosion")
+        {
+            gameObject.GetComponent<PlayerDeathState>().enabled = true;
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            gameObject.GetComponent<PumpkinAnimation>().enabled = false;
+            gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+        }
+        
+    }
    
+
+}
