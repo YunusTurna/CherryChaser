@@ -31,6 +31,17 @@ public class PlayerDeathState : MonoBehaviour
         {
             i = 0;
         }
+        if(Input.GetKeyDown(KeyCode.Q) & i > 0)
+        {
+            i = i-1;
+
+        }
+        if(Input.GetKeyDown(KeyCode.Q) & i == 0)
+        {
+            i = deathCams.Length;
+
+        }
+        
 
     }
 }
