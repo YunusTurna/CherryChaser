@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CherryScript : MonoBehaviour
 {
-    [SerializeField] private int throwPower = 2000;
+    [SerializeField] private int horizontalThrowPower = 2000;
+    [SerializeField] private int verticalThrowPower = 2000;
     [SerializeField] private int comeBackSpeed = 100;
 
     public bool comeBackMethod = false;
@@ -31,7 +32,7 @@ public class CherryScript : MonoBehaviour
         {
             transform.parent = null;
             rb.isKinematic = false;
-            rb.AddForce((transform.forward + transform.up) * throwPower * Time.deltaTime, ForceMode.Impulse);
+            rb.AddForce(((transform.forward * horizontalThrowPower) + (transform.up*verticalThrowPower)) * Time.deltaTime, ForceMode.Impulse);
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
             this.gameObject.GetComponent<SphereCollider>().isTrigger = false;
 
