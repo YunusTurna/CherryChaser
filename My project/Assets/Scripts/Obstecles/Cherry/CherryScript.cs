@@ -22,12 +22,7 @@ public class CherryScript : MonoBehaviour
 
     private void Update()
     {
-        if (comeBackMethod == true & Parent != null)
-        {
-            ComeBackMethod();
-
-
-        }
+        
         if (transform.parent != null && Input.GetKeyDown(KeyCode.E))
         {
             transform.parent = null;
@@ -38,6 +33,15 @@ public class CherryScript : MonoBehaviour
 
         }
 
+    }
+    private  void FixedUpdate()
+    {
+        if (comeBackMethod == true & Parent != null)
+        {
+            ComeBackMethod();
+
+
+        }
     }
     private void OnCollisionEnter(Collision other)
     {
