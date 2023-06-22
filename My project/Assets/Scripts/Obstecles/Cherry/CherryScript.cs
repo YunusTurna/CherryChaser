@@ -29,6 +29,7 @@ public class CherryScript : MonoBehaviour
             rb.isKinematic = false;
             rb.AddForce(((transform.forward * horizontalThrowPower) + (transform.up*verticalThrowPower)) * Time.deltaTime, ForceMode.Impulse);
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
             this.gameObject.GetComponent<SphereCollider>().isTrigger = false;
 
         }
@@ -56,6 +57,7 @@ public class CherryScript : MonoBehaviour
             transform.localRotation = Quaternion.identity;
             rb.isKinematic = true;
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.GetComponent<SphereCollider>().isTrigger = true;
         }
         if (other.gameObject.CompareTag("Ground"))
