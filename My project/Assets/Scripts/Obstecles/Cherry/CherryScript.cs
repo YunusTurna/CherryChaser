@@ -7,9 +7,12 @@ public class CherryScript : MonoBehaviour
     [SerializeField] private int horizontalThrowPower = 2000;
     [SerializeField] private int verticalThrowPower = 2000;
     [SerializeField] private int comeBackSpeed = 100;
+    [SerializeField] private int rotateSpeed = 100;
+    public Vector3 rotation = new Vector3();
 
     public bool comeBackMethod = false;
     public bool grounded = false;
+    public bool spin = false;
     [SerializeField] private GameObject Parent;
 
     private Rigidbody rb;
@@ -25,13 +28,19 @@ public class CherryScript : MonoBehaviour
         
         if (transform.parent != null && Input.GetKeyDown(KeyCode.E))
         {
+            spin  = true;
             transform.parent = null;
             rb.isKinematic = false;
             rb.AddForce(((transform.forward * horizontalThrowPower) + (transform.up*verticalThrowPower)) * Time.deltaTime, ForceMode.Impulse);
+            transform.Rotate(rotation * rotateSpeed * Time.deltaTime , Space.Self);
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
             this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
             this.gameObject.GetComponent<SphereCollider>().isTrigger = false;
 
+        }
+        if(spin == true)
+        {
+            transform.Rotate(rotation * rotateSpeed * Time.deltaTime , Space.Self);
         }
 
     }
@@ -59,6 +68,7 @@ public class CherryScript : MonoBehaviour
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
             this.gameObject.GetComponent<SphereCollider>().isTrigger = true;
+            spin = false;
         }
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -67,6 +77,7 @@ public class CherryScript : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.isKinematic = true;
             grounded = true;
+
         }
 
 
