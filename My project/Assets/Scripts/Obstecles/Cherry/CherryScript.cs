@@ -8,6 +8,7 @@ public class CherryScript : MonoBehaviour
     [SerializeField] private int comeBackSpeed = 100;
 
     public bool comeBackMethod = false;
+    public bool grounded = false;
     [SerializeField] private GameObject Parent;
 
     private Rigidbody rb;
@@ -36,16 +37,14 @@ public class CherryScript : MonoBehaviour
 
         }
 
-
-
     }
-
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") & grounded == true )
         {
 
             comeBackMethod = false;
+            grounded = false;
             Parent = other.gameObject;
             transform.parent = Parent.transform;
             transform.localPosition = new Vector3(1.5f, 3.6f, 4.5f);
@@ -60,6 +59,7 @@ public class CherryScript : MonoBehaviour
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.isKinematic = true;
+            grounded = true;
         }
 
 
