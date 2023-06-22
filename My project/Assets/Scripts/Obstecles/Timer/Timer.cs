@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        if(CherryScript.timerRun == true){
         timer += Time.deltaTime;
 
         if (timer >= 1f)
@@ -33,5 +34,6 @@ public class Timer : MonoBehaviour
         }
 
 
+    }
     }
 }
