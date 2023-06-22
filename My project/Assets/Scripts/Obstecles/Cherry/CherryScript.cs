@@ -20,7 +20,7 @@ public class CherryScript : MonoBehaviour
 
     private void Update()
     {
-        if(comeBackMethod == true)
+        if(comeBackMethod == true & Parent != null)
         {
             ComeBackMethod();
             
@@ -33,10 +33,7 @@ public class CherryScript : MonoBehaviour
             rb.AddForce((transform.forward + transform.up) * throwPower * Time.deltaTime, ForceMode.Impulse);
             
         }
-        if(Vector3.Distance(transform.position , Parent.transform.position) > 5f)
-        {
-            this.gameObject.GetComponent<SphereCollider>().enabled = true;
-        }
+        
         
         
     }
@@ -49,7 +46,7 @@ public class CherryScript : MonoBehaviour
             comeBackMethod = false;
             Parent = other.gameObject;
             transform.parent = Parent.transform;
-            transform.localPosition = new Vector3(0, 8, 0);
+            transform.localPosition = new Vector3(1.5f, 3.6f, 4.5f);
             transform.localRotation = Quaternion.identity;
             rb.isKinematic = true;
         }
@@ -68,6 +65,6 @@ public class CherryScript : MonoBehaviour
     {
         
         
-        transform.position = Vector3.MoveTowards(transform.position , Parent.transform.position , comeBackSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position , Parent.transform.GetChild(5).transform.position , comeBackSpeed * Time.deltaTime);
     }
 }
