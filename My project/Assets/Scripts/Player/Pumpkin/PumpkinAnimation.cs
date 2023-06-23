@@ -18,9 +18,17 @@ public class PumpkinAnimation : MonoBehaviour
         Walk();
         Jump();
         Run();
+        CherryThrow();
        
 
 
+    }
+    void CherryThrow()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            anim.SetTrigger("Throw");
+        }
     }
     void Walk()
     {
