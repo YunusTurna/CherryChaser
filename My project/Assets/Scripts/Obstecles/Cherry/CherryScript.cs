@@ -8,6 +8,7 @@ public class CherryScript : MonoBehaviour
     [SerializeField] private int verticalThrowPower = 2000;
     [SerializeField] private int comeBackSpeed = 100;
     [SerializeField] private int rotateSpeed = 100;
+    public static bool timerRun = false;
     public Vector3 rotation = new Vector3();
 
     public bool comeBackMethod = false;
@@ -28,6 +29,7 @@ public class CherryScript : MonoBehaviour
         
         if (transform.parent != null && Input.GetKeyDown(KeyCode.E))
         {
+            timerRun = false;
             spin  = true;
             transform.parent = null;
             rb.isKinematic = false;
@@ -46,6 +48,7 @@ public class CherryScript : MonoBehaviour
         {
             transform.Rotate(rotation * rotateSpeed * Time.deltaTime , Space.Self);
         }
+       
 
     }
     private  void FixedUpdate()
@@ -61,6 +64,7 @@ public class CherryScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") & grounded == true )
         {
+            timerRun = true;
 
             comeBackMethod = false;
             grounded = false;
@@ -89,6 +93,7 @@ public class CherryScript : MonoBehaviour
 
     private void ComeBackMethod()
     {
+        timerRun = false;
 
 
         transform.position = Vector3.MoveTowards(transform.position, Parent.transform.GetChild(5).transform.position, comeBackSpeed * Time.deltaTime);
