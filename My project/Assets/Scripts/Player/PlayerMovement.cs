@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float movementSpeed = 5f;
+    public static bool rearrangeDeathCam;
 
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private GameObject deathCam;
@@ -104,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.gameObject.tag == "Explosion")
         {
+            rearrangeDeathCam = true;
             gameObject.GetComponent<PlayerDeathState>().enabled = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;

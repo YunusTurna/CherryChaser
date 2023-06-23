@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CherryScript : MonoBehaviour
 {
+    
     [SerializeField] private int horizontalThrowPower = 2000;
     [SerializeField] private int verticalThrowPower = 2000;
     [SerializeField] private int comeBackSpeed = 100;
@@ -21,6 +22,7 @@ public class CherryScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
 
     }
 

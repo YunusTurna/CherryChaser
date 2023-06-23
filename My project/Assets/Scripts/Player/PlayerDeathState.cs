@@ -4,42 +4,43 @@ using UnityEngine;
 
 public class PlayerDeathState : MonoBehaviour
 {
+    private bool DestroyCam = true;
+    [SerializeField] private GameObject ownDeathCam;
     [SerializeField] private GameObject[] deathCams;
     [SerializeField] private int transationSpeed = 100;
     int i = 0;
-    
 
-    
+
+
     void Update()
     {
         DeathState();
 
-        
+
     }
     void DeathState()
     {
-        deathCams = GameObject.FindGameObjectsWithTag("DeathCams");
-        transform.position = Vector3.MoveTowards(transform.position , deathCams[i].transform.position ,  transationSpeed* Time.deltaTime);
-        if(Input.GetKeyDown(KeyCode.E) & i < deathCams.Length)
+        if (DestroyCam == true)
         {
-            i = i+1;
+            ownDeathCam.transform.parent = null;
+            Destroy(ownDeathCam);
+            DestroyCam = false;
+        }
+
+
+        deathCams = GameObject.FindGameObjectsWithTag("DeathCams");
+        transform.position = Vector3.MoveTowards(transform.position, deathCams[i].transform.position, transationSpeed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.E) & i <= deathCams.Length)
+        {
+            i = i + 1;
 
         }
-        if(Input.GetKeyDown(KeyCode.E) & i == deathCams.Length)
+        if (Input.GetKeyDown(KeyCode.E) & i == deathCams.Length)
         {
             i = 0;
         }
-        if(Input.GetKeyDown(KeyCode.Q) & i > 0)
-        {
-            i = i-1;
 
-        }
-        if(Input.GetKeyDown(KeyCode.Q) & i == 0)
-        {
-            i = deathCams.Length;
 
-        }
-        
 
     }
 }
