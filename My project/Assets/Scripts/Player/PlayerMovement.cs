@@ -107,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rearrangeDeathCam = true;
             gameObject.GetComponent<PlayerDeathState>().enabled = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
             gameObject.GetComponent<PumpkinAnimation>().enabled = false;
