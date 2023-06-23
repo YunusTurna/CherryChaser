@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2263119257581142495}
   m_Layer: 0
   m_Name: CherryBomb
-  m_TagString: Untagged
+  m_TagString: Cherry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,15 +28,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5943039591488454079}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 341.41638, y: 34.51, z: 558.86}
-  m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
+  m_LocalScale: {x: 100, y: 99.999954, z: 99.999954}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1228809118774850564}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &2795722315918153114
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120,9 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133822641b7114141988e77004fa44a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalThrowPower: 2000
-  verticalThrowPower: 2000
-  comeBackSpeed: 100
+  OriginalCherry: {fileID: 0}
+  InstantiatePosition: {fileID: 0}
+  Cherry: {fileID: 0}
+  horizontalThrowPower: 4000
+  verticalThrowPower: 20
+  comeBackSpeed: 50
   rotateSpeed: 100
   rotation: {x: 1, y: 1, z: 1}
   comeBackMethod: 0
