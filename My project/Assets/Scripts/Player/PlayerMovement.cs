@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().isKinematic = true;
             gameObject.GetComponent<Rigidbody>().useGravity = false;
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            gameObject.GetComponent<PumpkinAnimation>().enabled = false;
+            
             gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             Destroy(deathCam);

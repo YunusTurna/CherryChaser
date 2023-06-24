@@ -14,7 +14,25 @@ public class PlayerDeathState : MonoBehaviour
 
     void Update()
     {
-        DeathState();
+    if (DestroyCam == true)
+        {
+            
+            Destroy(ownDeathCam);
+            DestroyCam = false;
+        }
+
+
+        deathCams = GameObject.FindGameObjectsWithTag("DeathCams");
+        transform.position = Vector3.MoveTowards(transform.position, deathCams[i].transform.position, transationSpeed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.E) & i <= deathCams.Length)
+        {
+            i = i + 1;
+
+        }
+        if (Input.GetKeyDown(KeyCode.E) & i == deathCams.Length)
+        {
+            i = 0;
+        }
 
 
     }
