@@ -798,6 +798,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 58e56545a2d219944b78729eaa444a51, type: 3}
+--- !u!1 &430425191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149904169570115269, guid: 3cd63c94a3e1b254dbbf1193eb010b66, type: 3}
+  m_PrefabInstance: {fileID: 1253092512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &430425199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430425191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de87cd2d409796f42b50eecac32d7f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462684039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,10 +2530,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.34673694
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7737967223650339403, guid: 3cd63c94a3e1b254dbbf1193eb010b66, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 149904169570115269, guid: 3cd63c94a3e1b254dbbf1193eb010b66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 430425199}
   m_SourcePrefab: {fileID: 100100000, guid: 3cd63c94a3e1b254dbbf1193eb010b66, type: 3}
 --- !u!4 &1377205443 stripped
 Transform:

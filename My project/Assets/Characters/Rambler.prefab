@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27474582559097388}
-  m_LocalRotation: {x: 0.28479233, y: -0.56643665, z: 0.2173622, w: 0.7421567}
+  m_LocalRotation: {x: -0.09014762, y: 0.9035813, z: -0.34673694, w: -0.23492076}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -382,11 +382,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7615982504496806921}
   - component: {fileID: 2927180916213917122}
-  - component: {fileID: 7737967223650339403}
   - component: {fileID: 6659001979882117696}
   - component: {fileID: 879015942126436880}
   - component: {fileID: 3000725682825933883}
   - component: {fileID: 2859417445583814768}
+  - component: {fileID: 1620838787069482521}
   m_Layer: 6
   m_Name: Rambler
   m_TagString: Player
@@ -414,7 +414,7 @@ Transform:
   - {fileID: 5568196193070343939}
   - {fileID: 9057209695606336695}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2927180916213917122
 MonoBehaviour:
@@ -428,24 +428,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1706a8db58d2f8489f69f4fee44d5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0
-  turnSpeed: 0
+  movementSpeed: 20
+  turnSpeed: 10
   deathCam: {fileID: 3541425063167105663}
-  jumpPower: 0
+  jumpPower: 10
   grounded: 0
   movement: {x: 0, y: 0, z: 0}
---- !u!114 &7737967223650339403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149904169570115269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab81862f19bda9349b3703b852694e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &6659001979882117696
 Animator:
   serializedVersion: 5
@@ -532,6 +520,18 @@ MonoBehaviour:
   ownDeathCam: {fileID: 0}
   deathCams: []
   transationSpeed: 100
+--- !u!114 &1620838787069482521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149904169570115269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de87cd2d409796f42b50eecac32d7f8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155836024346961699
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443136390505080233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.645752, y: 10.849998, z: -2.6380615}
+  m_LocalPosition: {x: 4.8705444, y: 10.849998, z: 8.733704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2962,7 +2962,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874323959576353067}
-  m_LocalRotation: {x: 0.27124572, y: -0.5702967, z: 0.2070231, w: 0.7472141}
+  m_LocalRotation: {x: -0.08585964, y: 0.9097388, z: -0.33024392, w: -0.23652165}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5432,7 +5432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5131446387946179878}
   m_LocalRotation: {x: 0.075151324, y: 0.9202367, z: -0.31528097, w: 0.21935038}
-  m_LocalPosition: {x: -14.156708, y: 0, z: 11.562805}
+  m_LocalPosition: {x: -9.3815, y: 0, z: 0.19104004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5544,7 +5544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5171983103648986484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -327.94, y: -36.22, z: -582.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7295,7 +7295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7090941276216906317}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: -0.15109381}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100.000015, y: 100.000015, z: 100.000015}
   m_ConstrainProportionsScale: 0
   m_Children: []
