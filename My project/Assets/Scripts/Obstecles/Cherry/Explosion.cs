@@ -32,6 +32,7 @@ public class Explosion : MonoBehaviour
             this.gameObject.GetComponent<SphereCollider>().enabled = true;
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
             Destroy(GameObject.Find("CherryBomb(Clone)"));
+            CherryScript.timerRun = false;
 
         }
 
