@@ -28,6 +28,7 @@ public class RumblerAnimation : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             anim.SetTrigger("Throw");
+            
         }
     }
     void Walk()

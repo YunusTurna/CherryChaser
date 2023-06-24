@@ -14,6 +14,7 @@ public class CherryScript : MonoBehaviour
 
     public bool comeBackMethod = false;
     public bool grounded = false;
+    
     public bool spin = false;
     [SerializeField] private GameObject Parent;
 
@@ -35,6 +36,7 @@ public class CherryScript : MonoBehaviour
             spin  = true;
             transform.parent = null;
             rb.isKinematic = false;
+            
             rb.AddForce(((transform.forward * horizontalThrowPower) + (transform.up*verticalThrowPower)) * Time.deltaTime, ForceMode.Impulse);
             transform.Rotate(rotation * rotateSpeed * Time.deltaTime , Space.Self);
             this.gameObject.GetComponent<MeshRenderer>().enabled = true;
