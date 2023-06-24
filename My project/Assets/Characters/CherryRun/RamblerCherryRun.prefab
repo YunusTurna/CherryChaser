@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 2859417445583814768}
   - component: {fileID: 1620838787069482521}
   m_Layer: 6
-  m_Name: Rambler
+  m_Name: RamblerCherryRun
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
