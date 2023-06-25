@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7876282156406285646}
   - component: {fileID: 5402157380211359059}
   - component: {fileID: 8474360626625983781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 8ddf376efc130dc49b1993e108eb41a3, type: 3}
+  - {fileID: 2100000, guid: a490127cee2d3f24b8ed528f74316101, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,9 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5778848607672361068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "yatay_z\u0131plama"
-  m_TagString: Untagged
+  m_TagString: AngularBooster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ Transform:
   - {fileID: 7876282156406285646}
   - {fileID: 7662896763588666771}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8583175893437732483
 GameObject:
@@ -128,10 +128,10 @@ GameObject:
   - component: {fileID: 4699621428282546166}
   - component: {fileID: 8831787843468330003}
   - component: {fileID: 7834502627273400785}
-  - component: {fileID: 583681325678416348}
-  m_Layer: 0
+  - component: {fileID: 3248904617104084972}
+  m_Layer: 7
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: VerticalBooster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,14 +143,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8583175893437732483}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.0030307025, y: 0.48088962, z: 0.033174813}
+  m_LocalRotation: {x: -0.76748055, y: -0.000000014901159, z: 0.000000031315718, w: 0.6410723}
+  m_LocalPosition: {x: 0.1, y: 0.78, z: -0.01}
   m_LocalScale: {x: 171.36949, y: 299.8966, z: 41.639996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5778848607672361068}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -100.256, y: 0, z: 0}
 --- !u!33 &4699621428282546166
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 8ddf376efc130dc49b1993e108eb41a3, type: 3}
+  - {fileID: 2100000, guid: 75658f7422149d543a7c4b01d0e20290, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,7 +223,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4493585093827132993, guid: 8ddf376efc130dc49b1993e108eb41a3, type: 3}
---- !u!114 &583681325678416348
+--- !u!114 &3248904617104084972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8583175893437732483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd12ffecfdfefa04eb4586c3e50731bb, type: 3}
+  m_Script: {fileID: 11500000, guid: d1da052cd8b1c714ea89d59d4b58b8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 1000
+  launchForce: -1100

@@ -579,6 +579,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RamblerCherryRun
       objectReference: {fileID: 0}
+    - target: {fileID: 879015942126436880, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402071295526270009, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402071295526270009, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2402071295526270009, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2988670115964625379, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.526009
@@ -605,11 +621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5949101858185673401, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.55442107
+      value: 0.554421
       objectReference: {fileID: 0}
     - target: {fileID: 5949101858185673401, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20125993
+      value: 0.20125994
       objectReference: {fileID: 0}
     - target: {fileID: 5949101858185673401, guid: e2a37517e33405a4daa8c87e235905c6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -806,7 +822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1798977139
 TerrainCollider:
   m_ObjectHideFlags: 0
