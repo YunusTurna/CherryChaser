@@ -16,6 +16,10 @@ TagManager:
   - Cherry
   - BeChild
   - BubiTrap
+  - JumperTrap
+  - TurretBullet
+  - Platform
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

@@ -75,12 +75,14 @@ public class RumblerAnimation : MonoBehaviour
         {
             Debug.Log("Deneme");
             grounded = true;
+            anim.SetBool("Jump" , false);
         }
     }
  private void OnCollisionExit(Collision other) {
         if(other.gameObject.tag == "Ground")
         {
             grounded = false;
+            anim.SetBool("Jump" , true);
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AngularBooster : MonoBehaviour
 {
     
-
+    public float XAxis , ZAxis;
     public float launchForce = 10f;  // Fırlatma kuvveti
     public static bool  addForce = false;
     
@@ -16,7 +16,7 @@ public class AngularBooster : MonoBehaviour
        {
         addForce = true;
         other.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-        other.gameObject.GetComponent<Rigidbody>().AddForce(((Vector3.forward * launchForce) + (Vector3.up * Mathf.Abs(launchForce))) * Time.deltaTime, ForceMode.Impulse);
+        other.gameObject.GetComponent<Rigidbody>().AddForce(((new Vector3(XAxis , 0 , ZAxis) * launchForce) + (Vector3.up * Mathf.Abs(launchForce))) * Time.deltaTime, ForceMode.Impulse);
         
         
         
