@@ -15,6 +15,7 @@ TagManager:
   - DeathCams
   - Cherry
   - BeChild
+  - BubiTrap
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - Player
   - Obstacles
   - Cherry
-  - 
-  - 
+  - No Post Processing
+  - Post
   - 
   - 
   - 
