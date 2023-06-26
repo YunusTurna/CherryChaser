@@ -4,11 +4,12 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPunCallbacks
 {
 
     public float movementSpeed = 5f;
     public static bool rearrangeDeathCam;
+    public GameObject CM;
 
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private GameObject deathCam;
@@ -26,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+       
+
         cameraTransform = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
         LockCursor();
@@ -49,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
         if (AngularBooster.addForce == false)
         {
             Vector3 movement = movementDirection * movementSpeed;
-
 
             rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
 
