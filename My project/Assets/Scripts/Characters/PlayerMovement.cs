@@ -4,11 +4,13 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPunCallbacks
 {
 
     public float movementSpeed = 5f;
     public static bool rearrangeDeathCam;
+    public GameObject CM;
+    
 
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private GameObject deathCam;
@@ -25,21 +27,25 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+   
     private void Start()
     {
+       
+
+
         cameraTransform = freelookcam.transform;
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }
     private void FixedUpdate()
-    {
-            
-            Movement();     
+    {   
+
+        Movement();     
     }
     
     private void Movement()
     {
-       
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
