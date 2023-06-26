@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
-using Photon.Realtime;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,13 +30,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-            
-            Movement();     
+       
+        
+            Movement();
+
+        
+        
     }
     
     private void Movement()
     {
-       
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
