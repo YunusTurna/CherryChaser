@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Maps/CherryBomb.unity
+    guid: 99409745251c9ed45a245d5629aeddd4
   m_configObjects: {}
