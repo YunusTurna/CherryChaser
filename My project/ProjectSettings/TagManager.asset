@@ -3,28 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Patrol
-  - TiltedBooster
-  - VerticalBooster
-  - Ground
-  - LRDetection
-<<<<<<< HEAD
-  - player
-  - Cherry
-=======
-  - AngularBooster
-  - CherryReturnPoint
-  - Explosion
-  - DeathCams
-  - Cherry
-  - BeChild
-  - BubiTrap
-  - JumperTrap
-  - TurretBullet
-  - Platform
-  - SpawnPoint
->>>>>>> YeniMain
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -32,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Obstacles
-  - Cherry
-  - No Post Processing
-  - Post
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
