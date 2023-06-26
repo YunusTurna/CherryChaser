@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        cameraTransform = freelookcam.transform;
+        cameraTransform = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }
