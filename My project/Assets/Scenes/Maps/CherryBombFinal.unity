@@ -11580,6 +11580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mushroom_b_a_01
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8718e58561a24f64b90736ee92619f41, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8718e58561a24f64b90736ee92619f41, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15127,6 +15131,10 @@ PrefabInstance:
       propertyPath: deathCam
       value: 
       objectReference: {fileID: 1266092073}
+    - target: {fileID: 719437334841089475, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+      propertyPath: turnSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 719437334841089475, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: freelookcam
       value: 
