@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float turnSpeed = 10f;
     [SerializeField] private GameObject deathCam;
+    [SerializeField] private GameObject freelookcam;
     public float jumpPower = 10f;
     public bool grounded = false;
     
@@ -26,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        cameraTransform = Camera.main.transform;
+        cameraTransform = freelookcam.transform;
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }

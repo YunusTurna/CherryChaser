@@ -1552,15 +1552,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2380325472784084461, guid: 725f11167e2f47a49a82b59f464c156c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2380325472784084461, guid: 725f11167e2f47a49a82b59f464c156c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2380325472784084461, guid: 725f11167e2f47a49a82b59f464c156c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2380325472784084461, guid: 725f11167e2f47a49a82b59f464c156c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7218,7 +7218,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   EffectFlags:
     components: []
-  sharedInstanceID: 962fe5da-887c-4837-a911-f5d40721cecb
+  sharedInstanceID: d1bfe502-e79b-432c-a28b-be26d20dcb8a
 --- !u!1001 &913797000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8873,6 +8873,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1970186704901528330, guid: a3cad02177cacd14b9ae54dcd621b948, type: 3}
   m_PrefabInstance: {fileID: 482960509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1266092073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3561931909574660631, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+  m_PrefabInstance: {fileID: 5167640490124500284}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286750099 stripped
 GameObject:
@@ -14053,6 +14058,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25a8344cfd9bceb4b9125f7f8b54d120, type: 3}
+--- !u!1 &2060394338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4263111641179656237, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+  m_PrefabInstance: {fileID: 5167640490124500284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2064956659
 GameObject:
   m_ObjectHideFlags: 0
@@ -15113,6 +15123,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.0000019073486
       objectReference: {fileID: 0}
+    - target: {fileID: 719437334841089475, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+      propertyPath: deathCam
+      value: 
+      objectReference: {fileID: 1266092073}
+    - target: {fileID: 719437334841089475, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+      propertyPath: freelookcam
+      value: 
+      objectReference: {fileID: 2060394338}
     - target: {fileID: 1303972267658701572, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_CollideAgainst.m_Bits
       value: 1
@@ -15164,6 +15182,10 @@ PrefabInstance:
     - target: {fileID: 3877227763626734688, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_Lens.FarClipPlane
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4263111641179656237, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4266768836595396101, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_Lens.FarClipPlane
