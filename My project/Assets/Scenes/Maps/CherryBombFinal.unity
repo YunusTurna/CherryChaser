@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.014286414, g: 0.057194564, b: 0.10527304, a: 1}
+  m_IndirectSpecularColor: {r: 0.014286414, g: 0.057194553, b: 0.10527304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7376,7 +7376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908369082}
-  m_LocalRotation: {x: -0.09346605, y: 0.90128875, z: -0.34585693, w: -0.24356861}
+  m_LocalRotation: {x: -0.09346608, y: 0.90128875, z: -0.3458569, w: -0.24356869}
   m_LocalPosition: {x: 9.127032, y: 12.45, z: 23.528769}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12398,6 +12398,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8718e58561a24f64b90736ee92619f41, type: 3}
   m_PrefabInstance: {fileID: 1767569953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1796405898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796405899}
+  - component: {fileID: 1796405900}
+  m_Layer: 0
+  m_Name: Fences
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796405899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796405898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 75.38211}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1914015047}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1796405900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796405898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee1359076689fb429e33ad9b17c5484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FencePoints:
+  - {x: -471.06354, y: 270.4821, z: 97.73663}
+  - {x: -465.03503, y: 270.4821, z: 80.57994}
+  FencePrefabs:
+  - {fileID: -8679921383154817045, guid: bb9b2e893602d46409a85630c7954a03, type: 3}
+  PostPrefab: {fileID: 0}
+  FenceEndOffset: {x: 0, y: 0, z: 0}
+  FenceRotation: 0
+  FenceLength: 2
+  FenceScale: {x: 1, y: 1, z: 1}
+  CompleteLoop: 0
+  ObjectMode: 0
+  PositionVariation: {x: 0, y: 0}
+  RotationVariation: {x: -180, y: 180}
+  ScaleVariation: {x: 1, y: 1}
+  UseShear: 1
+  UseRaycast: 0
+  RaycastOffsetMax: 1
+  RaycastOffsetMin: -1
+  LayerMask: -5
 --- !u!1001 &1818472389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12816,6 +12880,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1796405899}
   - {fileID: 30468776}
   - {fileID: 695838509}
   - {fileID: 308188159}
@@ -14881,11 +14946,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470646633121021710, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.24356866
+      value: -0.24356873
       objectReference: {fileID: 0}
     - target: {fileID: 470646633121021710, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.09346607
+      value: -0.09346609
       objectReference: {fileID: 0}
     - target: {fileID: 470646633121021710, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -14893,7 +14958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470646633121021710, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.34585696
+      value: -0.34585693
       objectReference: {fileID: 0}
     - target: {fileID: 498426043640396611, guid: 67f49078c08245c49baba644c5444e1f, type: 3}
       propertyPath: m_LocalPosition.y
