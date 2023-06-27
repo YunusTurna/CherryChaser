@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     public float movementSpeed = 5f;
     public static bool rearrangeDeathCam;
-    public GameObject CM;
+    
     
 
     [SerializeField] private float turnSpeed = 10f;
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
        
 
 
-        cameraTransform = freelookcam.transform;
+        
         rb = GetComponent<Rigidbody>();
         LockCursor();
     }
@@ -50,23 +50,23 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         float verticalInput = Input.GetAxis("Vertical");
 
         // Kamera yönünü hesapla
-        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 movementDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
+        //Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
+        // movementDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
 
-        if (AngularBooster.addForce == false)
+        //if (AngularBooster.addForce == false)
         {
-            Vector3 movement = movementDirection * movementSpeed;
+          //  Vector3 movement = movementDirection * movementSpeed;
 
 
-            rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
+           // rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
 
         }
         // Karakterin yönünü kamera yönüne ayarla
-        if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, turnSpeed * Time.deltaTime);
-        }
+       // if (movementDirection != Vector3.zero)
+       // {
+         //   Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
+        //    transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, turnSpeed * Time.deltaTime);
+       // }
 
         // Imleci kilitleme/kilidini açma
         if (Input.GetKeyDown(KeyCode.Escape))
