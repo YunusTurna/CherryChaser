@@ -30,7 +30,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         Debug.Log("odaya girildi");
-        PhotonNetwork.Instantiate("PlayerVariant", new Vector3(337, 36, 527), Quaternion.identity, 0, null);
+        PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
     }
     // Update is called once per frame
     void Update()

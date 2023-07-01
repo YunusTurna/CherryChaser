@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Maps/CherryBomb.unity
-    guid: 99409745251c9ed45a245d5629aeddd4
+    path: Assets/Scenes/Maps/CherryBombMulti.unity
+    guid: 8ff0655dca837944b9b7457dc51487cc
   m_configObjects: {}

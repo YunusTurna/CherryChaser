@@ -27,7 +27,7 @@ public class PumpkinAnimation : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            anim.SetTrigger("Throw");
+            //anim.SetTrigger("Throw");
         }
     }
     void Walk()
