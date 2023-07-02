@@ -21,6 +21,8 @@ public class deneme : MonoBehaviourPunCallbacks
     {
 
         if (!photonView.IsMine) return;
+       
+       
         rb = GetComponent<Rigidbody>();
         
 
@@ -98,7 +100,9 @@ public class deneme : MonoBehaviourPunCallbacks
 
     private void CameraRotation()
     {
+       
         if (!photonView.IsMine) return;
+
         // Fare ile kamera rotasyonu
         float horizontalRotation = Input.GetAxis("Mouse X") * mouseSensitivity;
         transform.Rotate(0f, horizontalRotation, 0f);

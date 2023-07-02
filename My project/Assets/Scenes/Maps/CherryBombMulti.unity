@@ -8933,11 +8933,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.200231, y: 15.011832, z: 0.24500167}
   m_Center: {x: 0.00000015381845, y: 7.3984413, z: 0.028418804}
---- !u!20 &986912690 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2056405500116928653, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-  m_PrefabInstance: {fileID: 2972276961690380975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &988922553
 GameObject:
   m_ObjectHideFlags: 0
@@ -18411,25 +18406,13 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7701429965664874163, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701429965664874163, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-      propertyPath: playerCamera
-      value: 
-      objectReference: {fileID: 986912690}
-    - target: {fileID: 7701429965664874163, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-      propertyPath: movementSpeed
-      value: 10
+    - target: {fileID: 6940425264787856203, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9032703679673349365, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
       propertyPath: m_Name
       value: Pumpkin
-      objectReference: {fileID: 0}
-    - target: {fileID: 9032703679673349365, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
