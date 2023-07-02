@@ -70,5 +70,17 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
   - Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
   - Map üzerindeki platformlara mekanikler eklenmiştir.
 
+# Sprint 2
 
+- **Sprint içinde tamamlanması tahmin edilen puan**: 12 Puan
+
+- **Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır. Tasarım için ayrı bir Whatsapp grubu kurulmuştur. Whatsapp üzerinde tasarım dili oturtulmuştur. Günlük olarak mekanik yazılımları ve modellemeler yapılmıştır. (Bayram tatili boyunca müsaitlik sağlanamadı)
+- **Tasarım Whatsapp Grubu Mantığı**: Grup içerisinde haritaların ve karakterlerin görsel dili tamamen oturtulmuştur. Bir sonraki map için tasarım dili hazır hale gelmiştir. 
+ [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 1]() 
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
 ---
