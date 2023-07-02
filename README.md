@@ -44,7 +44,7 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 - **Tasarım ve Developing Mantığı**: Tasarım tarafı aynı zamanda developing kısmında da çalışacaktır. 1. ve 2. Sprint'te tasarım dilinin tam oturması için ayrı grup oluşturulması takımca doğru bulunmuştur.
 - **Tasarım Grubu Üyeleri**: Arif, Kevser, Hilal.
-- **Sprint board update**: Sprint Board Screenshot: 
+- **Sprint 1 board update**: Sprint Board Screenshot: 
 ![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/IMG-20230618-WA0007.jpg)
 
 - **Ürün Durumu**: Ekran Görüntüleri:
@@ -59,16 +59,16 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 
 - **Sprint Review**:
-  - Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
+  - 2. Sprint'in sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir. Online sistem dışında istenilen amaçlara ulaşılmıştır. Tasarım dili karar verilmiş ve oyuna entegre edilmiştir.
   - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
 
 - **Sprint Retrospective:**
-  - Roller ile ilgili düzenleme yapılmış, product owner değişmiştir.
   - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
-  - Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapılmıştır.
-  - Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
-  - Map üzerindeki platformlara mekanikler eklenmiştir.
+  - Modellemeler ile ilgili tasarım grubunun görevleri dağılmış, daha az iş kaldığı için developing kısmına el atılması gerektiğine karar kılınmıştır.
+  - Karakterin  animasyonları ve mekanikleri entegre edilmiştir.
+  - 1. Map bitmiş karakter ve platform animasyonları eklenilmesi için not alınmıştır.
+  - 2. Map'e başlanılmış, taslağı hazırlanmıştır.
 
 # Sprint 2
 
@@ -76,11 +76,19 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 - **Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır. Tasarım için ayrı bir Whatsapp grubu kurulmuştur. Whatsapp üzerinde tasarım dili oturtulmuştur. Günlük olarak mekanik yazılımları ve modellemeler yapılmıştır. (Bayram tatili boyunca müsaitlik sağlanamadı)
 - **Tasarım Whatsapp Grubu Mantığı**: Grup içerisinde haritaların ve karakterlerin görsel dili tamamen oturtulmuştur. Bir sonraki map için tasarım dili hazır hale gelmiştir. 
- [Sprint 2 Daily Scrum Chats](<blockquote class="imgur-embed-pub" lang="en" data-id="a/12umyrv"  ><a href="//imgur.com/a/12umyrv">SPRINT2</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+ [Sprint 2 Daily Scrum Chats](<blockquote class="imgur-embed-pub" lang="en" data-id="a/12umyrv"  ><a href="//imgur.com/a/12umyrv">SPRINT2</a></blockquote>)
 
-- **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1]() 
+- **Sprint 2 board update**: Sprint 2 Board Screenshot: 
+![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Trello%20sprint%202.png)
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: Ekran Görüntüleri:
+  ![Screenshot 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-07-03%2001.00.29.png)
+  ![Screenshot 2](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-07-03%2000.59.54.png)
+  ![Screenshot 3](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-07-03%2000.59.28.png)
+  ![Screenshot 4](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-27%2022.47.40.png)
+  ![Screenshot 5](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-27%2003.06.40.png)
+  ![Screenshot 6](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/WhatsApp%20Image%202023-06-25%20at%2015.18.21.jpeg)
+
+
 ---
