@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class FreeLookCamera : MonoBehaviour
+public class FreeLookCamera : MonoBehaviourPunCallbacks
 {
     public Transform target;            // Kameranýn etrafýnda dönülecek hedef nesne (karakter)
     public float rotationSpeed = 3f;    // Kamera dönüþ hýzý
@@ -17,6 +19,7 @@ public class FreeLookCamera : MonoBehaviour
 
     void Start()
     {
+        if (!photonView.IsMine) return;
         // Kamera ile hedef arasýndaki mesafeyi hesapla
         Vector3 offset = transform.position - target.position;
 
@@ -31,6 +34,7 @@ public class FreeLookCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!photonView.IsMine) return;
         // Fare giriþini al
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
         float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed;
