@@ -58,12 +58,13 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
   ![GIF 1](https://i.imgur.com/7a7pykI.gif)
 
 
-- **Sprint Review**:
+  **Sprint Review**:
 - Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
 - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
 
-- **Sprint Retrospective:**
+
+  **Sprint Retrospective:**
 - Roller ile ilgili düzenleme yapılmış, product owner değişmiştir.
 - Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapılmıştır.
 - Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
@@ -75,10 +76,18 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 - **Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır. Tasarım için ayrı bir Whatsapp grubu kurulmuştur. Whatsapp üzerinde tasarım dili oturtulmuştur. Günlük olarak mekanik yazılımları ve modellemeler yapılmıştır. (Bayram tatili boyunca müsaitlik sağlanamadı)
 - **Tasarım Whatsapp Grubu Mantığı**: Grup içerisinde haritaların ve karakterlerin görsel dili tamamen oturtulmuştur. Bir sonraki map için tasarım dili hazır hale gelmiştir. 
- [Sprint 2 Daily Scrum Chats](<blockquote class="imgur-embed-pub" lang="en" data-id="a/12umyrv"  ><a href="//imgur.com/a/12umyrv">SPRINT2</a></blockquote>)
+
+  - **Toplantı ve Whatsapp ScreenShotları**:
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/12umyrv"  ><a href="//imgur.com/a/12umyrv">SPRINT2</a></blockquote>
+
+
 
 - **Sprint 2 board update**: Sprint 2 Board Screenshot: 
 ![Backlog 1](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Trello%20sprint%202.png)
+
+
+
+
 
 
 - **Ürün Durumu**: Ekran Görüntüleri:
@@ -88,17 +97,24 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
   ![Screenshot 4](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-27%2022.47.40.png)
   ![Screenshot 5](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-27%2003.06.40.png)
   ![Screenshot 6](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/WhatsApp%20Image%202023-06-25%20at%2015.18.21.jpeg)
+  ![Screenshot 6 - Blossom](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/WhatsApp%20Image%202023-07-03%20at%2001.21.56.jpeg)
+
+
+
 
 - **Sprint Review**:
-  - Sprint 2'nin sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir. Online sistem dışında istenilen amaçlara ulaşılmıştır. Tasarım dili karar verilmiş ve oyuna entegre edilmiştir.
-  - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
+    - Sprint 2'nin sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir. Online sistem dışında istenilen amaçlara ulaşılmıştır. Tasarım dili karar verilmiş ve oyuna entegre edilmiştir.
+    - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
+
+
 
 
 - **Sprint Retrospective:**
-  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
-  - Modellemeler ile ilgili tasarım grubunun görevleri dağılmış, daha az iş kaldığı için developing kısmına el atılması gerektiğine karar kılınmıştır.
-  - Karakterin çoğu animasyonları ve mekanikleri entegre edilmiştir.
-  - 1. Map bitmiş karakter ve platform animasyonları eklenilmesi için not alınmıştır.
-  - 2. Map'e başlanılmış, taslağı hazırlanmıştır.
+    - **Sprint 2 için alınan puan 11'dir.** Online sistemi çözmek diğer sprint'e kalmıştır.
+    - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+    - Modellemeler ile ilgili tasarım grubunun görevleri dağılmış, daha az iş kaldığı için developing kısmına el atılması gerektiğine karar kılınmıştır.
+    - Karakterin çoğu animasyonları ve mekanikleri entegre edilmiştir.
+    - Birinci Map bitmiş karakter ve platform animasyonları eklenilmesi için not alınmıştır.
+    - İkinci Map'e başlanılmış, taslağı hazırlanmıştır.
     
 ---
