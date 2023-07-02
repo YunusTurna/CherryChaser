@@ -76,7 +76,7 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 - **Daily Scrum**: Daily Scrum toplantıları hem Whatsapp üzerinden hem de Discord üzerinden devam etmiştir. Discord'da haftada birkaç gün toplantılar yapılmıştır. Tasarım için ayrı bir Whatsapp grubu kurulmuştur. Whatsapp üzerinde tasarım dili oturtulmuştur. Günlük olarak mekanik yazılımları ve modellemeler yapılmıştır. (Bayram tatili boyunca müsaitlik sağlanamadı)
 - **Tasarım Whatsapp Grubu Mantığı**: Grup içerisinde haritaların ve karakterlerin görsel dili tamamen oturtulmuştur. Bir sonraki map için tasarım dili hazır hale gelmiştir. 
- [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
+ [Sprint 2 Daily Scrum Chats](<blockquote class="imgur-embed-pub" lang="en" data-id="a/12umyrv"  ><a href="//imgur.com/a/12umyrv">SPRINT2</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1]() 
