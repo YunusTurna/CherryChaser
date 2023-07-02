@@ -59,16 +59,15 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
 
 
 - **Sprint Review**:
-  - 2. Sprint'in sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir. Online sistem dışında istenilen amaçlara ulaşılmıştır. Tasarım dili karar verilmiş ve oyuna entegre edilmiştir.
-  - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
+- Map ve karakterlerin sayısına, low poly bir tasarım diline hakim olmasına karar verilmiştir.
+- Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
 
 - **Sprint Retrospective:**
-  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
-  - Modellemeler ile ilgili tasarım grubunun görevleri dağılmış, daha az iş kaldığı için developing kısmına el atılması gerektiğine karar kılınmıştır.
-  - Karakterin  animasyonları ve mekanikleri entegre edilmiştir.
-  - 1. Map bitmiş karakter ve platform animasyonları eklenilmesi için not alınmıştır.
-  - 2. Map'e başlanılmış, taslağı hazırlanmıştır.
+- Roller ile ilgili düzenleme yapılmış, product owner değişmiştir.
+- Tasarım grubu ile ayrı toplantı yapıldı. Modelleme konusunda görev dağılımı yapılmıştır.
+- Karakterin hareket animasyonları ve mekanikleri eklenmiştir.
+- Map üzerindeki platformlara mekanikler eklenmiştir.
 
 # Sprint 2
 
@@ -90,5 +89,16 @@ Toplantı ve Whatsapp ScreenShotları <blockquote class="imgur-embed-pub" lang="
   ![Screenshot 5](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/Ekran%20Resmi%202023-06-27%2003.06.40.png)
   ![Screenshot 6](https://github.com/YunusTurna/CherryChaser/blob/main/ProjectManagement/WhatsApp%20Image%202023-06-25%20at%2015.18.21.jpeg)
 
+- **Sprint Review**:
+  - 2. Sprint'in sonunda ekip ile toplanılmış ve Sprint gözden geçirilmiştir. Online sistem dışında istenilen amaçlara ulaşılmıştır. Tasarım dili karar verilmiş ve oyuna entegre edilmiştir.
+  - Sprint Review katılımcıları: Ahmet Yunus Turna, Arif Furkan Karaca, Kevser Bilgiç, Umut Yiğit, Hilal Karakuş.
 
+
+- **Sprint Retrospective:**
+  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+  - Modellemeler ile ilgili tasarım grubunun görevleri dağılmış, daha az iş kaldığı için developing kısmına el atılması gerektiğine karar kılınmıştır.
+  - Karakterin  animasyonları ve mekanikleri entegre edilmiştir.
+  - 1. Map bitmiş karakter ve platform animasyonları eklenilmesi için not alınmıştır.
+  - 2. Map'e başlanılmış, taslağı hazırlanmıştır.
+    
 ---
