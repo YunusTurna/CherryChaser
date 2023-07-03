@@ -19,16 +19,29 @@ public class deneme : MonoBehaviourPunCallbacks
 
     void Start()
     {
+       
+        //if (!photonView.IsMine) return;
 
-        if (!photonView.IsMine) return;
-       
-       
+        
+
+
+
+
         rb = GetComponent<Rigidbody>();
         
 
         // Fare imleci gizleniyor ve sýnýrlarý belirleniyor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (!photonView.IsMine)
+        {
+            //Destroy(playerCamera);
+            Debug.Log("KAMERAAAAAAAAAAAA");
+
+            playerCamera.enabled = false;
+
+        }
     }
 
     void Update()
