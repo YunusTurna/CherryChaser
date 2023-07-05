@@ -6,8 +6,8 @@ using Photon.Realtime;
 
 public class deneme : MonoBehaviourPunCallbacks
 {
-    public float movementSpeed = 5f;     // Hareket hýzý
-    public float jumpForce = 5f;         // Zýplama kuvveti
+    public float movementSpeed = 5f;     // Hareket hï¿½zï¿½
+    public float jumpForce = 5f;         // Zï¿½plama kuvveti
     public float throwForce = 10f;
     public float mouseSensitivity = 2f;  // Fare hassasiyeti
     public static bool grounded = false;
@@ -30,7 +30,7 @@ public class deneme : MonoBehaviourPunCallbacks
         rb = GetComponent<Rigidbody>();
         
 
-        // Fare imleci gizleniyor ve sýnýrlarý belirleniyor
+        // Fare imleci gizleniyor ve sï¿½nï¿½rlarï¿½ belirleniyor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -94,10 +94,11 @@ public class deneme : MonoBehaviourPunCallbacks
             rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
         }
 
-        // Zýplama
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.01f)
+        // Zï¿½plama
+        if (Input.GetButtonDown("Jump") & grounded == true)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            grounded = false;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))

@@ -4,84 +4,45 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-    public GameObject[] pizzaSlices;
-    public int fallSpeed;
-    public bool fallTrigger = false;
-    public float timeCounter;
-    public float fallTime;
-    public List < int >  randomNumbers = new List< int >();
-    public int count;
-    public int min, max, randomPizzaSlice, counter;
+    private List<GameObject> availableObjects;
+    GameObject selectedObject;
 
-    
-
-
-    void Start()
+    private void Start()
     {
-        
+        InvokeRepeating("MakeClockFall", 0, 1);
+        GameObject[] objectsToSelect = GameObject.FindGameObjectsWithTag("Ground");
+        availableObjects = new List<GameObject>(objectsToSelect);
     }
 
-    
-    void Update()
+    public void MakeClockFall()
     {
-        
-    }
-    public void GenerateUniqueNumber()
-    {
-        int randomNumber = -1;
 
-        do { 
-            randomNumber = Random.Range(min, max);
-        } while (randomNumbers.Contains(randomNumber));
 
-        
-        randomNumbers.Add(randomNumber);
-        count++;
-        counter = count;
-       randomPizzaSlice = randomNumber;
-        Debug.Log(randomNumber);
-
-        if (count >=(max-min))
+        if (Yelkovan.makeItFall == true)
         {
-            count = 0;
-            randomNumbers.Clear();
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(counter< 12)
-        {
-            GenerateUniqueNumber();
-            StartCoroutine(PizzaFall());
-        }
-        
-            
-        
-        
+            if (availableObjects.Count == 0)
+            {
+                Debug.Log("All Ground objects have been selected.");
+                return;
+            }
 
-        
-    }
-    IEnumerator PizzaFall()
-    {
-       timeCounter = 0f;
-        
+            int randomIndex = Random.Range(0, availableObjects.Count);
+            selectedObject = availableObjects[randomIndex];
+            selectedObject.GetComponent<MeshCollider>().convex = true;
+            selectedObject.GetComponent<Rigidbody>().isKinematic = false;
+            selectedObject.GetComponent<Rigidbody>().useGravity = true;
 
-        while(timeCounter < fallTime)
-        {
-          
-            pizzaSlices[randomPizzaSlice].transform.Translate(Vector3.back * fallTime * Time.deltaTime);
-            
-            
-            timeCounter += Time.deltaTime;
-            yield return null;
+            Yelkovan.makeItFall = false;
+            Debug.Log("Selected Object: " + selectedObject.name);
+            availableObjects.RemoveAt(randomIndex);
         }
-        
-        
-        
+
+
+
 
     }
-    
 
-   
+
+
 
 }
