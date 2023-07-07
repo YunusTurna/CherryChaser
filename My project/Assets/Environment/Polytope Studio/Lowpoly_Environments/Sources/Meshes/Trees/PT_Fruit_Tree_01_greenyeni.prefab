@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8663951116853784462}
   - component: {fileID: 3644617631568663876}
+  - component: {fileID: 2691888072313432603}
   m_Layer: 0
   m_Name: PT_Fruit_Tree_01_greenyeni
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_GameObject: {fileID: 1571186092078033567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.35, z: 27.22}
-  m_LocalScale: {x: 5.47, y: 5.47, z: 5.47}
+  m_LocalScale: {x: 4.21, y: 4.21, z: 4.21}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1091922212626382051}
   - {fileID: 1721523182547933361}
   - {fileID: 7606895183420199329}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!205 &3644617631568663876
 LODGroup:
@@ -62,6 +63,28 @@ LODGroup:
     renderers:
     - renderer: {fileID: 562945469940074991}
   m_Enabled: 1
+--- !u!64 &2691888072313432603
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571186092078033567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &3443708415950978883
 GameObject:
   m_ObjectHideFlags: 0
