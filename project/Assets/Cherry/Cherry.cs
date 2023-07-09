@@ -5,6 +5,7 @@ using UnityEngine;
 public class Cherry : MonoBehaviour
 {
     [SerializeField] private GameObject parent;
+    [SerializeField] private GameObject referans;
     [SerializeField] public float speed;
     Rigidbody rb;
     public bool moveTowards = false;
@@ -36,6 +37,7 @@ public class Cherry : MonoBehaviour
         }
         if (other.gameObject.tag == "Player")
         {
+            //transform.position = referans.transform.transform.position;
             rb.velocity =  new Vector3(0,0,0);
             moveTowards = true;
             comeBack = false;

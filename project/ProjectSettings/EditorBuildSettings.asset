@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/U\u0131.unity"
+    guid: 90300aa4f94ce324e9518504ee1b2c39
+  - enabled: 1
     path: Assets/Scenes/CherryBombMulti.unity
     guid: 8ff0655dca837944b9b7457dc51487cc
+  - enabled: 1
+    path: Assets/Scenes/CherryRunMap.unity
+    guid: 6769963857fe1411687ed45826554b08
+  - enabled: 1
+    path: Assets/Scenes/CherryOClock.unity
+    guid: 4bee0f94d68682541aeacb95d422186e
   m_configObjects: {}

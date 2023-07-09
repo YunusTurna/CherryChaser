@@ -12,6 +12,11 @@ TagManager:
   - Explosion
   - ClockSlices
   - LapCounter
+  - Platform
+  - Bullet
+  - JumperTrap
+  - TurretBullet
+  - "fini\u015F"
   layers:
   - Default
   - TransparentFX

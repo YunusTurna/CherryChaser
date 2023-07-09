@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class deneme : MonoBehaviourPunCallbacks
 {
@@ -71,6 +72,13 @@ public class deneme : MonoBehaviourPunCallbacks
         {
             throwBool = true;
         }
+        if (other.gameObject.tag == "finiş")
+        {
+            Debug.Log("sahne geçildi");
+            SceneManager.LoadScene("CherryRunMap");
+        }
+
+
     }
 
     private void Throw()
@@ -89,7 +97,7 @@ public class deneme : MonoBehaviourPunCallbacks
         Vector3 movement = new Vector3(horizontalMovement, 0f, verticalMovement);
         movement = transform.rotation * movement;
 
-        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0) & grounded == true)
+        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
         {
             rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
         }
