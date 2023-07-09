@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class CherryScript : MonoBehaviour
+public class CherryScript : MonoBehaviourPunCallbacks
 {
     
     [SerializeField] private int horizontalThrowPower = 2000;
