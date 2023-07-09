@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
+
 
 public class Sunucu : MonoBehaviourPunCallbacks
 {
@@ -15,6 +17,11 @@ public class Sunucu : MonoBehaviourPunCallbacks
     [SerializeField] TMP_Text Error;
     [SerializeField] Transform RoomContent;
     [SerializeField] GameObject RoomList;
+    [SerializeField] GameObject PlayerList;
+    [SerializeField] Transform PlayerContent;
+    [SerializeField] TMP_Text Nick;
+    [SerializeField] TMP_Dropdown Maps;
+    [SerializeField] Button baslat;
 
     private int maxplayers;
 
@@ -39,6 +46,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
     {
         //base.OnJoinedLobby();
         Debug.Log("LOBÝYE BAÐLANILDI");
+        PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString();
+        Nick.text = PhotonNetwork.NickName;
         MenuManager.Instance.OpenMenu("Title");
     }
 
@@ -62,8 +71,28 @@ public class Sunucu : MonoBehaviourPunCallbacks
         //base.OnJoinedRoom();
         Debug.Log("odaya girildi");
         MenuManager.Instance.OpenMenu("RoomMenü");
-        RoomNameText.text = RoomName.text + "  " + PhotonNetwork.CountOfPlayers.ToString() + " /  5 " ;
-       
+        RoomNameText.text = RoomName.text + "  " + PhotonNetwork.CountOfPlayers.ToString() + " / 5 " ;
+
+
+        Player[] players = PhotonNetwork.PlayerList;
+
+        foreach (Transform child in PlayerContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            Instantiate(PlayerList, PlayerContent).GetComponent<PlayerListPrefab>().SetPlayer(players[i]);
+        }
+        if (PhotonNetwork.CountOfPlayers>=1)
+        {
+            baslat.interactable=true;
+        }
+        else
+        {
+            baslat.interactable = false;
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -76,6 +105,11 @@ public class Sunucu : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("Loading");
+    }
+
+    public override void OnLeftRoom()
+    {
+        MenuManager.Instance.OpenMenu("Title");
     }
 
     public void RoomJoin(RoomInfo info)
@@ -104,7 +138,30 @@ public class Sunucu : MonoBehaviourPunCallbacks
         }
         for (int i = 0; i < roomList.Count; i++)
         {
+            if (roomList[i].RemovedFromList)
+                continue;
+            
+
+            
             Instantiate(RoomList, RoomContent).GetComponent<RoomListPrefab>().SetInfo(roomList[i]);
+        }
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        //base.OnPlayerEnteredRoom(newPlayer);
+        Instantiate(PlayerList, PlayerContent).GetComponent<PlayerListPrefab>().SetPlayer(newPlayer);
+    }
+
+    public void OyunuBaslat()
+    {
+        if (Maps.value==0)
+        {
+            PhotonNetwork.LoadLevel("CherryBombMulti");
+        }
+        if (Maps.value==1)
+        {
+            PhotonNetwork.LoadLevel("CherryRunMap");
         }
     }
 

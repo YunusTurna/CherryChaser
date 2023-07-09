@@ -24,7 +24,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        if (!photonView.IsMine) return;
+        
         rb = GetComponent<Rigidbody>();
         
 
@@ -32,7 +32,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        
+       
         if (transform.parent != null && Input.GetKeyDown(KeyCode.E))
         {
             timerRun = false;
@@ -60,6 +60,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
     }
     private  void FixedUpdate()
     {
+       
         if (comeBackMethod == true & Parent != null)
         {
             ComeBackMethod();
@@ -69,6 +70,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision other)
     {
+        
         if (other.gameObject.CompareTag("Player") & grounded == true )
         {
             timerRun = true;
@@ -100,6 +102,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
 
     private void ComeBackMethod()
     {
+        
         timerRun = false;
 
 
