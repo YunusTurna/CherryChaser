@@ -14880,6 +14880,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 3616222517688853457, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616222517688853457, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -22
+      objectReference: {fileID: 0}
     - target: {fileID: 3716505446918744728, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -14963,6 +14971,14 @@ PrefabInstance:
     - target: {fileID: 3716505446918744728, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789361979922430968, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789361979922430968, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23513,7 +23529,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -23622,7 +23638,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
