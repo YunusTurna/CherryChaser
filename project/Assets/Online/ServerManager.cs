@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class ServerManager : MonoBehaviourPunCallbacks
 {
-    // Start is called before the first frame update
+    
 
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
     }
+
+    
+        
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
@@ -33,9 +37,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         Debug.Log("odaya girildi");
         PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+   
+
 }

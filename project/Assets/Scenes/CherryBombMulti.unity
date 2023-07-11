@@ -953,6 +953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7534388e6335e974a8280bd2205a6a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pumpkin: 0
+  iki: 0
+  "\xFC\xE7": 0
+  "d\xF6rt": 0
+  "kapand\u0131_m\u0131": 0
+  karakterPanel: {fileID: 0}
 --- !u!4 &51209638
 Transform:
   m_ObjectHideFlags: 0
@@ -14880,13 +14886,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1356607504035807832, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3616222517688853457, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 32
+      value: 125.00001
       objectReference: {fileID: 0}
     - target: {fileID: 3616222517688853457, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22
+      value: -33.000023
       objectReference: {fileID: 0}
     - target: {fileID: 3716505446918744728, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_Pivot.x
@@ -14974,11 +14984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5789361979922430968, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -369
+      value: -276
       objectReference: {fileID: 0}
     - target: {fileID: 5789361979922430968, guid: 26cef4137bdbe504ea37dd29b181e299, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 226
+      value: 215
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
