@@ -166,10 +166,12 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public void OyunuBaslat()
     {
+
         if (PhotonNetwork.IsMasterClient)
         {
             if (Maps.value==0)
             {
+
                 PhotonNetwork.LoadLevel("CherryBombMulti");
                 KarakterSeçimi();
                 SeçArtýk();
@@ -187,6 +189,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
     }
     public void KarakterSeçimi()
     {
+        if (!photonView.IsMine) return;
         if (karakter.value==0)
         {
             birinciKarakter = true;
@@ -230,6 +233,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public void SeçArtýk()
     {
+        if (!photonView.IsMine) return;
         if (birinciKarakter == true)
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
