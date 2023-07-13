@@ -22,9 +22,14 @@ public class CherryScript : MonoBehaviourPunCallbacks
 
     private Rigidbody rb;
 
+    PhotonView pw;
+
     private void Start()
     {
-        
+
+
+
+        pw = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
         
 
@@ -32,7 +37,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-       
+        
         if (transform.parent != null && Input.GetKeyDown(KeyCode.E))
         {
             timerRun = false;
@@ -60,7 +65,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
     }
     private  void FixedUpdate()
     {
-       
+        
         if (comeBackMethod == true & Parent != null)
         {
             ComeBackMethod();
@@ -70,32 +75,38 @@ public class CherryScript : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision other)
     {
+        if (!pw.IsMine)
+        {
+            if (other.gameObject.CompareTag("Player") & grounded == true )
+            {
+
+                timerRun = true;
+                comeBackMethod = false;
+                grounded = false;
+                Parent = other.gameObject;
+                transform.parent = Parent.transform;
+                transform.localPosition = new Vector3(1.5f, 3.6f, 4.5f);
+                transform.localRotation = Quaternion.identity;
+                rb.isKinematic = true;
+                this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+                this.gameObject.GetComponent<SphereCollider>().isTrigger = true;
+                spin = false;
+            }
+            if (other.gameObject.CompareTag("Ground"))
+            {
+                comeBackMethod = true;
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true;
+                grounded = true;
+
+            }
+
+        }
+
         
-        if (other.gameObject.CompareTag("Player") & grounded == true )
-        {
-            timerRun = true;
-
-            comeBackMethod = false;
-            grounded = false;
-            Parent = other.gameObject;
-            transform.parent = Parent.transform;
-            transform.localPosition = new Vector3(1.5f, 3.6f, 4.5f);
-            transform.localRotation = Quaternion.identity;
-            rb.isKinematic = true;
-            this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            this.gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
-            this.gameObject.GetComponent<SphereCollider>().isTrigger = true;
-            spin = false;
-        }
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            comeBackMethod = true;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.isKinematic = true;
-            grounded = true;
-
-        }
+        
 
 
     }
