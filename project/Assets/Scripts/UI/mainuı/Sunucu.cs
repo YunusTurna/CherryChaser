@@ -10,6 +10,8 @@ using UnityEngine.UI;
 public class Sunucu : MonoBehaviourPunCallbacks
 {
     //benim
+
+    
     public static Sunucu Instance;
     [SerializeField] TMP_InputField RoomName;
     [SerializeField] TMP_Text RoomNameText;
@@ -20,14 +22,22 @@ public class Sunucu : MonoBehaviourPunCallbacks
     [SerializeField] GameObject PlayerList;
     [SerializeField] Transform PlayerContent;
     [SerializeField] TMP_Text Nick;
-    [SerializeField] TMP_Dropdown Maps;
+    public TMP_Dropdown Maps;
+    public TMP_Dropdown karakter;
     [SerializeField] Button baslat;
+
+    public bool birinciKarakter;
+    public bool ikinciKarakter;
+    public bool üçüncüKarakter;
+    public bool dördüncüKarakter;
 
     private int maxplayers;
 
-     void Awake()
+    public GameObject myPrefab;
+    void Awake()
     {
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
@@ -160,15 +170,90 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             if (Maps.value==0)
             {
+                KarakterSeçimi();
+                
                 PhotonNetwork.LoadLevel("CherryBombMulti");
             }
             if (Maps.value==1)
             {
+                KarakterSeçimi();
+                
                 PhotonNetwork.LoadLevel("CherryRunMap");
             }
         }
        
     }
+    public void KarakterSeçimi()
+    {
+        if (karakter.value==0)
+        {
+            birinciKarakter = true;
+            ikinciKarakter = false;
+            üçüncüKarakter = false;
+            dördüncüKarakter = false;
+            
+            
+        }
+        if (karakter.value == 1)
+        {
+            birinciKarakter = false;
+            ikinciKarakter = true;
+            üçüncüKarakter = false;
+            dördüncüKarakter = false;
+
+
+        }
+        if (karakter.value == 2)
+        {
+            birinciKarakter = false;
+            ikinciKarakter = false;
+            üçüncüKarakter = true;
+            dördüncüKarakter = false;
+
+
+        }
+        if (karakter.value == 3)
+        {
+            birinciKarakter = false;
+            ikinciKarakter = false;
+            üçüncüKarakter = false;
+            dördüncüKarakter = true;
+
+
+        }
+
+        
+
+    }
+
+    /*public void SeçArtýk()
+    {
+        if (birinciKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("111111111111111");
+            GameObject obj = Instantiate(myPrefab);
+            DontDestroyOnLoad(obj);
+
+        }
+        else if (ikinciKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
+            Debug.Log("222222222222");
+            GameObject obj = Instantiate(myPrefab);
+            DontDestroyOnLoad(obj);
+        }
+        else if (üçüncüKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("33333333333333333333333");
+        }
+        else if (dördüncüKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("444444444444444");
+        }
+    }*/
 
 
 }
