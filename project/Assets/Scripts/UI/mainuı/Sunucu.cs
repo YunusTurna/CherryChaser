@@ -174,14 +174,14 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
                 PhotonNetwork.LoadLevel("CherryBombMulti");
                 KarakterSeçimi();
-                SeçArtýk();
+                //SeçArtýk();
                 
             }
             if (Maps.value==1)
             {
                 PhotonNetwork.LoadLevel("CherryRunMap");
                 KarakterSeçimi();
-                SeçArtýk();
+                //SeçArtýk();
                 
             }
         }
@@ -189,7 +189,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
     }
     public void KarakterSeçimi()
     {
-        if (!photonView.IsMine) return;
+        
         if (karakter.value==0)
         {
             birinciKarakter = true;
@@ -233,7 +233,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public void SeçArtýk()
     {
-        if (!photonView.IsMine) return;
+        
         if (birinciKarakter == true)
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
