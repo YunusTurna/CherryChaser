@@ -31,7 +31,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
     }
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();    
+        PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
 
@@ -155,14 +156,18 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public void OyunuBaslat()
     {
-        if (Maps.value==0)
+        if (PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.LoadLevel("CherryBombMulti");
+            if (Maps.value==0)
+            {
+                PhotonNetwork.LoadLevel("CherryBombMulti");
+            }
+            if (Maps.value==1)
+            {
+                PhotonNetwork.LoadLevel("CherryRunMap");
+            }
         }
-        if (Maps.value==1)
-        {
-            PhotonNetwork.LoadLevel("CherryRunMap");
-        }
+       
     }
 
 
