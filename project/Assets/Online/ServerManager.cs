@@ -16,7 +16,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
         //snc.KarakterSeçimi();
 
-        /*if (snc.birinciKarakter==true)
+        if (snc.birinciKarakter==true)
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("111111111111111");
@@ -35,7 +35,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("444444444444444");
-        } */
+        } 
 
 
 

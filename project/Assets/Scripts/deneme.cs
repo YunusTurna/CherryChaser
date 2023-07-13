@@ -40,7 +40,7 @@ public class deneme : MonoBehaviourPunCallbacks
             //Destroy(playerCamera);
             Debug.Log("KAMERAAAAAAAAAAAA");
 
-            playerCamera.enabled = false;
+            playerCamera.enabled = true;
 
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class FreeLookCamera : MonoBehaviourPunCallbacks
+public class kamera : MonoBehaviourPunCallbacks
 {
     public Transform target;            // Kameranýn etrafýnda dönülecek hedef nesne (karakter)
     public float rotationSpeed = 3f;    // Kamera dönüþ hýzý

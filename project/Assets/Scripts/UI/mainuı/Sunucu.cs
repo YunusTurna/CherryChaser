@@ -170,15 +170,17 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             if (Maps.value==0)
             {
-                KarakterSeçimi();
-                
                 PhotonNetwork.LoadLevel("CherryBombMulti");
+                KarakterSeçimi();
+                SeçArtýk();
+                
             }
             if (Maps.value==1)
             {
-                KarakterSeçimi();
-                
                 PhotonNetwork.LoadLevel("CherryRunMap");
+                KarakterSeçimi();
+                SeçArtýk();
+                
             }
         }
        
@@ -226,7 +228,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     }
 
-    /*public void SeçArtýk()
+    public void SeçArtýk()
     {
         if (birinciKarakter == true)
         {
@@ -240,8 +242,10 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
             Debug.Log("222222222222");
-            GameObject obj = Instantiate(myPrefab);
+            GameObject obj = Instantiate(myPrefab);           
             DontDestroyOnLoad(obj);
+           
+            obj.GetComponentInChildren<Camera>().enabled = true;
         }
         else if (üçüncüKarakter == true)
         {
@@ -253,7 +257,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("444444444444444");
         }
-    }*/
+    }
 
 
 }
