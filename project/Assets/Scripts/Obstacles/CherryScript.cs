@@ -75,7 +75,7 @@ public class CherryScript : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision other)
     {
-        if (!pw.IsMine)
+        if (!pw.IsMine) 
         {
             if (other.gameObject.CompareTag("Player") & grounded == true )
             {
