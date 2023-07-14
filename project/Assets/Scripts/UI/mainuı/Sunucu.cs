@@ -165,26 +165,29 @@ public class Sunucu : MonoBehaviourPunCallbacks
     }
 
     public void OyunuBaslat()
-    {     
-            if (Maps.value==0)
-            {        
+    {
+        if (photonView.IsMine)
+        {
+            if (Maps.value == 0)
+            {
                 KarakterSecimi();
                 SecArtık();
                 if (PhotonNetwork.IsMasterClient)
                 {
                     PhotonNetwork.LoadLevel("CherryBombMulti");
-                }                                             
+                }
             }
 
-            if (Maps.value==1)
+            if (Maps.value == 1)
             {
                 KarakterSecimi();
                 SecArtık();
                 if (PhotonNetwork.IsMasterClient)
                 {
                     PhotonNetwork.LoadLevel("CherryRunMap");
-                }                                         
+                }
             }
+        }
      
     }
     public void KarakterSecimi()
