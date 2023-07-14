@@ -3527,7 +3527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42cc4c7761f7c84d89d737fff9926b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuName: "RoomMen\xFC"
+  MenuName: RoomMenu
   open: 0
 --- !u!1 &745714860
 GameObject:
@@ -5453,8 +5453,8 @@ MonoBehaviour:
   baslat: {fileID: 603665375}
   birinciKarakter: 0
   ikinciKarakter: 0
-  "\xFC\xE7\xFCnc\xFCKarakter": 0
-  "d\xF6rd\xFCnc\xFCKarakter": 0
+  ucuncuKarakter: 0
+  dorduncuKarakter: 0
   myPrefab: {fileID: 9032703679673349365, guid: 2f90f86eca86ead4aaa8723a06a9a876, type: 3}
 --- !u!1 &1205265338
 GameObject:

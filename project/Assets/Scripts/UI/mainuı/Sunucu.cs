@@ -28,8 +28,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public bool birinciKarakter;
     public bool ikinciKarakter;
-    public bool üçüncüKarakter;
-    public bool dördüncüKarakter;
+    public bool ucuncuKarakter;
+    public bool dorduncuKarakter;
 
     private int maxplayers;
 
@@ -49,14 +49,14 @@ public class Sunucu : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         //base.OnConnectedToMaster();
-        Debug.Log("SERVERE BAÐLANILDI ");
+        Debug.Log("SERVERE BAï¿½LANILDI ");
         PhotonNetwork.JoinLobby();
     }
 
     public override void OnJoinedLobby()
     {
         //base.OnJoinedLobby();
-        Debug.Log("LOBÝYE BAÐLANILDI");
+        Debug.Log("LOBï¿½YE BAï¿½LANILDI");
         PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString();
         Nick.text = PhotonNetwork.NickName;
         MenuManager.Instance.OpenMenu("Title");
@@ -81,7 +81,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
     {
         //base.OnJoinedRoom();
         Debug.Log("odaya girildi");
-        MenuManager.Instance.OpenMenu("RoomMenü");
+        MenuManager.Instance.OpenMenu("RoomMenu");
         RoomNameText.text = RoomName.text + "  " + PhotonNetwork.CountOfPlayers.ToString() + " / 5 " ;
 
 
@@ -171,8 +171,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
         
             if (Maps.value==0)
             {        
-                KarakterSeçimi();
-                //SeçArtýk();
+                KarakterSecimi();
+                SecArtÄ±k();
                 if (PhotonNetwork.IsMasterClient)
                 {
                     PhotonNetwork.LoadLevel("CherryBombMulti");
@@ -180,8 +180,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
             }
             if (Maps.value==1)
             {
-             KarakterSeçimi();
-                //SeçArtýk();
+             KarakterSecimi();
+                SecArtÄ±k();
                 if (PhotonNetwork.IsMasterClient)
                 {
                     PhotonNetwork.LoadLevel("CherryRunMap");
@@ -190,15 +190,15 @@ public class Sunucu : MonoBehaviourPunCallbacks
         
        
     }
-    public void KarakterSeçimi()
+    public void KarakterSecimi()
     {
         
         if (karakter.value==0)
         {
             birinciKarakter = true;
             ikinciKarakter = false;
-            üçüncüKarakter = false;
-            dördüncüKarakter = false;
+            ucuncuKarakter = false;
+            dorduncuKarakter = false;
             
             
         }
@@ -206,8 +206,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             birinciKarakter = false;
             ikinciKarakter = true;
-            üçüncüKarakter = false;
-            dördüncüKarakter = false;
+            ucuncuKarakter = false;
+            dorduncuKarakter = false;
 
 
         }
@@ -215,8 +215,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             birinciKarakter = false;
             ikinciKarakter = false;
-            üçüncüKarakter = true;
-            dördüncüKarakter = false;
+            ucuncuKarakter = true;
+            dorduncuKarakter = false;
 
 
         }
@@ -224,8 +224,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
         {
             birinciKarakter = false;
             ikinciKarakter = false;
-            üçüncüKarakter = false;
-            dördüncüKarakter = true;
+            ucuncuKarakter = false;
+            dorduncuKarakter = true;
 
 
         }
@@ -234,15 +234,17 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     }
 
-    public void SeçArtýk()
+    public void SecArtÄ±k()
     {
         
         if (birinciKarakter == true)
         {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            GameObject myPlayerGo = (GameObject)PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("111111111111111");
             GameObject obj = Instantiate(myPrefab);
             DontDestroyOnLoad(obj);
+            myPlayerGo.transform.FindChild("Camera").gameObject.SetActive(true);
+            
 
         }
         else if (ikinciKarakter == true)
@@ -252,14 +254,14 @@ public class Sunucu : MonoBehaviourPunCallbacks
             GameObject obj = Instantiate(myPrefab);           
             DontDestroyOnLoad(obj);
            
-            obj.GetComponentInChildren<Camera>().enabled = true;
+            //obj.GetComponentInChildren<Camera>().enabled = true;
         }
-        else if (üçüncüKarakter == true)
+        else if (ucuncuKarakter == true)
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("33333333333333333333333");
         }
-        else if (dördüncüKarakter == true)
+        else if (dorduncuKarakter == true)
         {
             PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
             Debug.Log("444444444444444");
