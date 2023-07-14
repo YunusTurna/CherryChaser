@@ -178,9 +178,10 @@ public class Sunucu : MonoBehaviourPunCallbacks
                     PhotonNetwork.LoadLevel("CherryBombMulti");
                 }                                             
             }
+
             if (Maps.value==1)
             {
-             KarakterSecimi();
+                KarakterSecimi();
                 SecArtık();
                 if (PhotonNetwork.IsMasterClient)
                 {
@@ -243,17 +244,23 @@ public class Sunucu : MonoBehaviourPunCallbacks
             Debug.Log("111111111111111");
             GameObject obj = Instantiate(myPrefab);
             DontDestroyOnLoad(obj);
-            myPlayerGo.transform.FindChild("Camera").gameObject.SetActive(true);
+            //myPlayerGo.transform.FindChild("Camera").gameObject.SetActive(true);
             
 
         }
         else if (ikinciKarakter == true)
         {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
-            Debug.Log("222222222222");
-            GameObject obj = Instantiate(myPrefab);           
+
+
+            GameObject myPlayerGo = (GameObject)PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("2222222222222222");
+            GameObject obj = Instantiate(myPrefab);
             DontDestroyOnLoad(obj);
-           
+            //PhotonNetwork.Instantiate("Pumpkin", new Vector3(0, 0, 0), Quaternion.identity, 0, null);
+            //Debug.Log("222222222222");
+            //GameObject obj = Instantiate(myPrefab);           
+            //DontDestroyOnLoad(obj);
+
             //obj.GetComponentInChildren<Camera>().enabled = true;
         }
         else if (ucuncuKarakter == true)
@@ -270,3 +277,4 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
 
 }
+    
