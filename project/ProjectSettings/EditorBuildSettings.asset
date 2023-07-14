@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CherryRunMap.unity
     guid: 6769963857fe1411687ed45826554b08
   - enabled: 1
-    path: Assets/Scenes/CherryOClock.unity
-    guid: 4bee0f94d68682541aeacb95d422186e
+    path: Assets/Scenes/CherryOClockMap2.unity
+    guid: 1beba744035b7420b9e1e85a21059b8f
   m_configObjects: {}

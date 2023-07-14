@@ -166,8 +166,8 @@ public class Sunucu : MonoBehaviourPunCallbacks
 
     public void OyunuBaslat()
     {
-        if (photonView.IsMine)
-        {
+        
+        
             if (Maps.value == 0)
             {
                 KarakterSecimi();
@@ -187,8 +187,18 @@ public class Sunucu : MonoBehaviourPunCallbacks
                     PhotonNetwork.LoadLevel("CherryRunMap");
                 }
             }
-        }
-     
+
+            if (Maps.value == 2)
+            {
+                KarakterSecimi();
+                SecArtık();
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    PhotonNetwork.LoadLevel("CherryOClockMap2");
+                }
+            }
+
+
     }
     public void KarakterSecimi()
     {
