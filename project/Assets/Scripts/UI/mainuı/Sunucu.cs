@@ -165,10 +165,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
     }
 
     public void OyunuBaslat()
-    {
-
-        
-        
+    {     
             if (Maps.value==0)
             {        
                 KarakterSecimi();
@@ -188,8 +185,7 @@ public class Sunucu : MonoBehaviourPunCallbacks
                     PhotonNetwork.LoadLevel("CherryRunMap");
                 }                                         
             }
-        
-       
+     
     }
     public void KarakterSecimi()
     {
