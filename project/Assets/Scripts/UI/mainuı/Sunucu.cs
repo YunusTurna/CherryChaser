@@ -170,20 +170,20 @@ public class Sunucu : MonoBehaviourPunCallbacks
             {        
                 KarakterSecimi();
                 SecArtık();
-                 
-                
+                if (PhotonNetwork.IsMasterClient)
+                {
                     PhotonNetwork.LoadLevel("CherryBombMulti");
-                                                            
+                }                                             
             }
 
             if (Maps.value==1)
             {
                 KarakterSecimi();
                 SecArtık();
-                
-                
+                if (PhotonNetwork.IsMasterClient)
+                {
                     PhotonNetwork.LoadLevel("CherryRunMap");
-                                                         
+                }                                         
             }
      
     }
