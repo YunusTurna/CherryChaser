@@ -8,44 +8,53 @@ using Photon.Realtime;
 
 public class ServerManager : MonoBehaviourPunCallbacks
 {
-    public Sunucu snc;
+    //public Sunucu snc;
+    public GameObject Chamb;
+    public GameObject panel;
+
+    public bool birinciKarakter;
+    public bool ikinciKarakter;
+    public bool ucuncuKarakter;
+    public bool dorduncuKarakter;
+
 
     void Start()
     {
         //snc = new Sunucu();
         PhotonNetwork.ConnectUsingSettings();
+
+        Time.timeScale = 0;
         //snc.KarakterSeçimi();
 
-        /*if (snc.birinciKarakter==true)
-        {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
-            Debug.Log("111111111111111");
-        }
-        else if (snc.ikinciKarakter == true)
-        {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
-            Debug.Log("222222222222");
-        }
-        else if (snc.üçüncüKarakter == true)
-        {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
-            Debug.Log("33333333333333333333333");
-        }
-        else if (snc.dördüncüKarakter == true)
-        {
-            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
-            Debug.Log("444444444444444");
-        } */
+       
 
 
 
-        PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+         //Chamb = (GameObject)PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
 
+        
+
+
+    }
+    
+   
+    public void birlo()
+    {
+        
+        panel.SetActive(false);
+        ikinciKarakter = true;
+
+        
+        //Chamb.transform.Find("Pumpkin2").gameObject.SetActive(true);
+        //panel.SetActive(false);
+        Time.timeScale = 1;
 
     }
 
     
-        
+
+
+
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
@@ -62,11 +71,35 @@ public class ServerManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        secým();
         base.OnJoinedRoom();
         Debug.Log("odaya girildi");
-        PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+        //PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
     }
     
+    public void secým()
+    {
+        if (birinciKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("111111111111111");
+        }
+        else if (ikinciKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("222222222222");
+        }
+        else if (ucuncuKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("33333333333333333333333");
+        }
+        else if (dorduncuKarakter == true)
+        {
+            PhotonNetwork.Instantiate("Pumpkin", new Vector3(4, 4, 14), Quaternion.identity, 0, null);
+            Debug.Log("444444444444444");
+        }
+    }
    
 
 }
